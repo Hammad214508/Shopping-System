@@ -3,7 +3,7 @@
   <?php include ($_SERVER['DOCUMENT_ROOT'].'/eveg-js/header.php') ?>
 </head>
 
-<body style="background-color: #bbb;" onload="createEmptyBasket();">
+<body style="background-color: #bbb;" onload="setupBasket();">
   <?php include ($_SERVER['DOCUMENT_ROOT'].'/eveg-js/navigation.php');?>
 
   <div style="text-align: center;">

@@ -4,8 +4,6 @@ $(document).ready(function(){
         var thispage = {};
         thispage.init = function(){
 
-          updateBasketCount();
-
           $("#cancel").on("click", function(){
             window.open("/eveg-js/Shop/","_self")
           })

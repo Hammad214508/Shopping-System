@@ -11,18 +11,37 @@
 
     <div id="main-menu" class="collapse navbar-collapse">
         <ul class="nav navbar-nav mr-auto mt-2 mt-lg-0">
-            <li id="nav-products" class="nav-item"><a class="nav-link" href="<?php global $basedir; ?>/eveg-js/Shop/">Products</a></li>
+          <li id="nav-products" class="nav-item"><a class="nav-link" href="<?php global $basedir; ?>/eveg-js/Shop/">Products</a></li>
+          <li id="nav-products" class="nav-item"><a class="nav-link" href="<?php global $basedir; ?>/eveg-js/Help/">Help</a></li>
+          <li style="color:#343a40">fill</li>
+          <li  class="nav-item">
+            <div class="autocomplete input-group" >
+              <input type="search" id="search" class="form-control" placeholder="Search..." style="width:300px;"/>
+            </div>
+            <button type="button" class="btn btn-secondary" style="position:absolute; font-size:22px;">
+              <i class="fa fa-search"></i>
+            </button>
+          </li>
         </ul>
 
+
+
+
         <ul class="nav navbar-nav">
-            <li id="nav-basket" class="nav-item">
-              <a class="nav-link" href="<?php global $basedir; ?>/eveg-js/Basket/">Basket
-                <i class="fa fa-shopping-cart" aria-hidden="true" style="font-size:20px"></i>
-                <span class='badge badge-warning' id='cart_count'> 0 </span>
-              </a>
-            </li>
+          <li id="nav-basket" class="nav-item">
+            <a class="nav-link" href="<?php global $basedir; ?>/eveg-js/Basket/">Basket
+              <i class="fa fa-shopping-cart" aria-hidden="true" style="font-size:20px"></i>
+              <span class='badge badge-warning' id='cart_count'></span>
+            </a>
+          </li>
         </ul>
     </div>
 
   </div>
 </nav>
+
+<script>
+  updateBasketCount();
+  autocomplete(document.getElementById("search"), food_items);
+
+</script>
