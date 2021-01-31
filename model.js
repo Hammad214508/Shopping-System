@@ -104,6 +104,19 @@ function calculateTotals() {
   return totals;
 }
 
+function updateBasketCount(){
+  var num_items = 0;
+  basket = readBasket();
+  for (var product in basket) {
+    if (basket[product] != "0" && basket[product] != "NaN"){
+      num_items += 1;
+    }
+  }
+
+  var span = document.getElementById("cart_count");
+  span.textContent = num_items;
+}
+
 function addToBasket(product, quantity) {
   if (document.cookie.indexOf(product) == -1) {
     createEmptyBasket();
@@ -113,6 +126,8 @@ function addToBasket(product, quantity) {
   newquantity = oldquantity + parseInt(quantity);
 
   document.cookie = product + "=" + newquantity.toString() + ";path=/";
+
+  updateBasketCount();
 }
 
 function removeProductFromBasket(product) {

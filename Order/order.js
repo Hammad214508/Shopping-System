@@ -4,7 +4,7 @@ $(document).ready(function(){
         var thispage = {};
         thispage.init = function(){
 
-          console.log(document.cookie)
+          updateBasketCount();
 
           $("#cancel").on("click", function(){
             window.open("/eveg-js/Shop/","_self")

@@ -10,7 +10,9 @@ $(document).ready(function(){
         var thispage = {};
         thispage.init = function(){
             $.fn.activate_nav_bar();
-            
+
+            updateBasketCount();
+
             $("#clck_to_cont").on("click", function(){
               window.open("/eveg-js/Shop/","_self")
             })

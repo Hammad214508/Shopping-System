@@ -15,7 +15,12 @@
         </ul>
 
         <ul class="nav navbar-nav">
-            <li id="nav-basket" class="nav-item"><a class="nav-link" href="<?php global $basedir; ?>/eveg-js/Basket/">Basket <i class="fa fa-shopping-cart" aria-hidden="true"></i> </a></li>
+            <li id="nav-basket" class="nav-item">
+              <a class="nav-link" href="<?php global $basedir; ?>/eveg-js/Basket/">Basket
+                <i class="fa fa-shopping-cart" aria-hidden="true" style="font-size:20px"></i>
+                <span class='badge badge-warning' id='cart_count'> 0 </span>
+              </a>
+            </li>
         </ul>
     </div>
 
