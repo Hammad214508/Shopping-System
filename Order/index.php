@@ -1,11 +1,12 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
-<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
-  <head>
-    <title></title>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8" /> 
-    <script type="text/javascript" src="model.js"></script>
-  </head>
-  <body style="background-color: #bbb;" onload="createEmptyOrder();">
+<head>
+    <title>Order</title>
+    <?php include ($_SERVER['DOCUMENT_ROOT'].'/eveg-js/header.php') ?>
+</head>
+
+<body style="background-color: #bbb;" onload="createEmptyOrder();">
+  <?php include ($_SERVER['DOCUMENT_ROOT'].'/eveg-js/navigation.php');?>
+
+  <div class="container-fluid">
     <form>
       <table>
        <tr>
@@ -30,18 +31,27 @@
        </tr>
        <tr>
          <td>
-           Card Type: <div style="display: inline-block;"><input type="radio" name="cardtype" id="solo" value="Solo" /> Solo<br /><input type="radio" name="cardtype" id="switch" value="Switch" /> Switch<br /><input type="radio" name="cardtype" id="mastercard" value="Mastercard" /> Mastercard<br /><input type="radio" name="cardtype" id="visa" value="Visa" /> Visa</div> 
+           Card Type:
+          <div style="display: inline-block;">
+            <input type="radio" name="cardtype" id="solo" value="Solo" /> Solo<br />
+            <input type="radio" name="cardtype" id="switch" value="Switch" /> Switch<br />
+            <input type="radio" name="cardtype" id="mastercard" value="Mastercard" /> Mastercard<br />
+            <input type="radio" name="cardtype" id="visa" value="Visa" /> Visa
+          </div>
            Card Number: <input type="text" name="cardnumber" id="cardnumber" value="" style="width: 120px;" />
            Expiry Date: <input type="text" name="month" id="month" value="" style="width: 10px;" /> <input type="text" name="year" id="year" value="" style="width: 10px;" />
          </td>
        </tr>
        <tr>
          <td style="text-align: center;">
-           <input type="button" name="cancel" value="Cancel" onclick="self.close()" />
-           <input type="button" name="proceed" value="Proceed" onclick="setName();setAddress();setCardDetails();window.open('invoice.html');self.close();"/>
+           <button id="cancel" type="button" class="btn btn-secondary">Cancel</button>
+           <button id="proceed" type="button" class="btn btn-secondary">Proceed</button>
          </td>
        </tr>
       </table>
     </form>
-  </body>
-</html>
+  </div>
+</body>
+
+<?php include ($_SERVER['DOCUMENT_ROOT'].'/eveg-js/footer.php') ?>
+<script src="<?php global $basedir; ?>/eveg-js/Order/order.js"></script>

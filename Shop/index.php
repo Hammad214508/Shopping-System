@@ -1,18 +1,18 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
-<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
-  <head>
-    <title></title>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-    <script type="text/javascript" src="model.js"></script>
-  </head>
-  <body>
+<head>
+    <title>Shop</title>
+    <?php include ($_SERVER['DOCUMENT_ROOT'].'/eveg-js/header.php') ?>
+</head>
+
+<body>
+  <?php include ($_SERVER['DOCUMENT_ROOT'].'/eveg-js/navigation.php');?>
+  <div class="container-fluid mb-5">
     <form>
       <table>
         <script>
           var productDetails = getProductDetails();
           for (var product in productDetails) {
             document.write('       <tr>\n');
-            document.write('         <td><img src="img/' + productDetails[product]["image"] + '" /></td>\n');
+            document.write('         <td><img src=<?php global $basedir?>"/eveg-js/img/' + productDetails[product]["image"] + '" /></td>\n');
             document.write('         <td>' + productDetails[product]["name"] + '</td>\n');
             document.write('         <td>' + productDetails[product]["description"] + '</td>\n');
             document.write('         <td>' + productDetails[product]["units"] + '</td>\n');
@@ -24,11 +24,10 @@
       </table>
     </form>
 
-    <div style="position: fixed; bottom: 0; left: 0; right: 0; height: 50px;">
-      <form>
-        <input type="button" name="exit" value="Exit" onclick="window.close()" />
-        <input type="button" name="viewbasket" value="View Basket" onclick="window.open('basket.html')" />
-      </form>
-    </div>
-  </body>
-</html>
+    <button id="view_basket" type="button" class="btn btn-secondary">View Basket</button>
+  </div>
+
+</body>
+
+<?php include ($_SERVER['DOCUMENT_ROOT'].'/eveg-js/footer.php') ?>
+<script src="<?php global $basedir; ?>/eveg-js/Shop/shop.js"></script>

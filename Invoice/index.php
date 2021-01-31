@@ -1,11 +1,11 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
-<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US" style="height: 100%;">
-  <head>
-    <title></title>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-    <script type="text/javascript" src="model.js"></script>
-  </head>
-  <body style="height: 100%; font-family: monospace;">
+<head>
+  <title>Invoice</title>
+  <?php include ($_SERVER['DOCUMENT_ROOT'].'/eveg-js/header.php') ?>
+</head>
+
+<body>
+  <?php include ($_SERVER['DOCUMENT_ROOT'].'/eveg-js/navigation.php');?>
+  <div class="container-fluid" style="height: 100%; font-family: monospace;">
     <script>
       document.write('    <textarea style="width: 100%; height: 100%;">\n');
       document.write('                                  INVOICE\n\n\n');
@@ -36,6 +36,9 @@
       document.write('         Paid by ' + cardDetails['cardtype'] + ' ' + cardDetails['cardnumber'].substr(-4) + ' (only last four digits given)\n');
       document.write('      ------------------------------------------------------------------------------\n');
       document.write('    </textarea>\n');
-    </script>
-  </body>
-</html>
+      </script>
+    </div>
+</body>
+
+<?php include ($_SERVER['DOCUMENT_ROOT'].'/eveg-js/footer.php') ?>
+<script src="<?php global $basedir; ?>/eveg-js/Invoice/invoice.js"></script>
