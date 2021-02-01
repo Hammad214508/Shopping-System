@@ -63,7 +63,7 @@
 
 
 
-
+/* FOOD IETM BOXES */
 .mypanel{
   display:block;
   height: 350px;
@@ -73,4 +73,35 @@
   background-color: #FAFAFA;
   padding:15px;
   border-radius: 5px;
+}
+
+
+
+#cross_preview {
+  position: absolute;
+  margin-top:-1.20em;
+  margin-left:3.3em;
+  font-size:20px;
+  color:#8b0000;
+}
+
+
+
+#scroll_top{
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: #6c757d;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+}
+#scroll_top:hover {
+  background-color: #343a40;
+  color: white;
 }

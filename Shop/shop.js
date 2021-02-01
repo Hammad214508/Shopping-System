@@ -24,40 +24,40 @@ $(document).ready(function(){
         var product_name = $(this).attr("ref").toLowerCase();
         var product_quantity = $("#"+product_name+"_quantity").val();
 
-
         addToBasket(product_name, product_quantity);
+        $("#basket_confirmation").show();
+        var num_items = parseInt($("#cart_count").html())
+        var txt = num_items == 1 ? "item" : "items"
+        $("#item_count").html("("+num_items+" "+txt+")");
+        $("#preview_img").attr("src", "../img/"+  productDetails[product_name]["image"])
+        var totals = calculateTotals();
+        $("#basket_price").html($.fn.roundToTwo(totals["total"]))
+        window.scrollTo(0,0)
+
+
       })
     }
+
+    $.fn.roundToTwo = function(num){
+      return +(Math.round(num + "e+2")  + "e-2");
+    }
+
 
     $.fn.get_product = function(productDetails, product){
       return (
         '<div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12 mb-2">'+
         '  <div class="mypanel text-center" >'+
-        '    <img src="../img/'+ productDetails[product]["image"]+'" class="img-responsive">'+
+        '    <img src="../img/'+ productDetails[product]["image"]+'" class="img-responsive" width="100px" height="90px">'+
         '    <h4 class="text-dark">'+productDetails[product]["name"]+'</h4>'+
         '    <h6>'+ productDetails[product]["description"]+'</h6>'+
-        //'     <h5 class="text-danger">&#8377; <?php echo $row["price"]; ?>/-</h5>'+
         '    <h6>'+ productDetails[product]["units"]+'</h6>'+
-        '    <h6> &pound;' + productDetails[product]["price"]+'</h6>'+
+        '    <h6> Price: &pound;' + productDetails[product]["price"]+'</h6>'+
         '    <h6>Quantity: <input id="'+productDetails[product]["name"].toLowerCase()+'_quantity" type="number" min="1" value="1" style="width: 40px;"> </h6>'+
-        '    <button ref="'+productDetails[product]["name"]+'" type="button" class="btn btn-success add_to_basket">Add to Basket</button>'+
+        '    <button ref="'+productDetails[product]["name"]+'" type="button" class="btn btn-success add_to_basket mt-4">Add to Basket</button>'+
         '  </div>'+
         '</div>'
       )
     }
-
-    // $.fn.get_product1 = function(productDetails, product){
-    //   return (
-    //     '<tr>\n'+
-    //     '  <td><img src="../img/' + productDetails[product]["image"] +'"/></td>\n'+
-    //     '  <td>' + productDetails[product]["name"] + '</td>\n'+
-    //     '  <td>' + productDetails[product]["description"] + '</td>\n'+
-    //     '  <td>' + productDetails[product]["units"] + '</td>\n'+
-    //     '  <td><input name="' + product + '" id="' + product + '" type="text" value="" style="width: 30px;" /></td>\n'+
-    //     '  <td><input name="add' + product + '" type="button" value="add to basket" onclick="javascript:addToBasket(\'' + product + '\', document.getElementById(\'' + product + '\').value)" /></td>\n'+
-    //     '</tr>\n'
-    //   )
-    // }
 
     var pageready = (function(){
         var thispage = {};
@@ -66,9 +66,20 @@ $(document).ready(function(){
 
             $.fn.render_products();
 
-            $("#view_basket").on("click", function(){
+            $("#view_basket, #edit_basket").on("click", function(){
               window.open("/eveg-js/Basket/","_self")
             })
+
+            $("#cross_preview").on("click", function(){
+              $("#basket_confirmation").hide();
+            });
+
+            $("#proceed_checkout").on("click", function(){
+              window.open("/eveg-js/Order/","_self")
+            });
+
+
+
         };
 
         return thispage;
