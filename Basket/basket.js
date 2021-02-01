@@ -26,11 +26,16 @@ $(document).ready(function(){
 
   }
 
+  $.fn.roundToTwo = function(num){
+    return +(Math.round(num + "e+2")  + "e-2");
+  }
+
+
   $.fn.show_price = function(){
     var totals = calculateTotals();
-    $("#price").append('Total ex VAT: ' + totals["totalnovat"] +
-                      ' includes VAT: ' + totals["vat"] +
-                      ' Total inc. VAT: ' + totals["total"])
+    $("#price").append('Total ex VAT: ' + $.fn.roundToTwo(totals["totalnovat"]) +
+                      ' includes VAT: ' + $.fn.roundToTwo(totals["vat"]) +
+                      ' Total inc. VAT: ' + $.fn.roundToTwo(totals["total"]))
   }
 
   $.fn.render_basket_items = function(){
@@ -53,7 +58,7 @@ $(document).ready(function(){
       ' <td>' + productDetails[product]["units"] + '</td>\n'+
       ' <td>&pound;' + productDetails[product]["price"] + '</td>\n'+
       ' <td><input name="' + product + '" id="' + product + '" type="text" value="' + basket[product] + '" style="width: 30px;" /></td>\n'+
-      ' <td><input name="change' + product + '" type="button" value="change quantity" onclick="javascript:changeProductQuantity(\'' + product + '\', document.getElementById(\'' + product + '\').value)" /></td>\n'+
+      ' <td><input name="change' + product.toLowerCase() + '" type="button" value="change quantity" onclick="javascript:changeProductQuantity(\'' + product.toLowerCase() + '\', document.getElementById(\'' + product.toLowerCase() + '\').value)" /></td>\n'+
       '</tr>\n'
     )
 

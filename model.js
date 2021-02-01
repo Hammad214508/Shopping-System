@@ -225,17 +225,26 @@ function updateBasketCount(){
   span.textContent = num_items;
 }
 
+function isNumeric(str) {
+  if (typeof str != "string") return false // we only process strings!
+  return !isNaN(str) && // use type coercion to parse the _entirety_ of the string (`parseFloat` alone does not do this)...
+         !isNaN(parseInt(str)) // ...and ensure strings of whitespace fail
+}
+
 function addToBasket(product, quantity) {
+
   if (document.cookie.indexOf(product) == -1) {
     createEmptyBasket();
   }
 
-  oldquantity = parseInt(getProductQuantity(product));
-  newquantity = oldquantity + parseInt(quantity);
-
-  document.cookie = product + "=" + newquantity.toString() + ";path=/";
-
-  updateBasketCount();
+  if (isNumeric(quantity)){
+    if (parseInt(quantity) > 0){
+      oldquantity = parseInt(getProductQuantity(product));
+      newquantity = oldquantity + parseInt(quantity);
+      document.cookie = product + "=" + newquantity.toString() + ";path=/";
+      updateBasketCount();
+    }
+  }
 }
 
 function removeProductFromBasket(product) {
