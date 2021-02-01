@@ -1,6 +1,12 @@
 var food_items = ["carrots", "bananas", "coconut", "apples",
                   "cherries", "tomatoes", "potatoes", "beans"];
 
+
+function itemSearch() {
+  var search_txt = document.getElementById('search').value;
+  document.getElementById('nav-products').click();
+}
+
 function autocomplete(inp, arr) {
   /*the autocomplete function takes two arguments,
   the text field element and an array of possible autocompleted values:*/
@@ -63,6 +69,8 @@ function autocomplete(inp, arr) {
         if (currentFocus > -1) {
           /*and simulate a click on the "active" item:*/
           if (x) x[currentFocus].click();
+        }else{
+          itemSearch();
         }
       }
   });
@@ -242,7 +250,6 @@ function setupBasket() {
   products = getProductList();
   var productcount = products.length;
   if (!document.cookie){
-    console.log("HERE")
     for (var i = 0; i < productcount; i++) {
       document.cookie=products[i] + "=0;path=/";
     }
