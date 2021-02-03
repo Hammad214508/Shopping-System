@@ -36,11 +36,11 @@
       <div class="row">
         <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12">
           <i class="fa fa-check" aria-hidden="true" style="color:green;"></i>
-          <img id="preview_img" src="../img/carrots.gif" class="img-fluid" alt="Image" width="45" height="45" style="border:1px solid green;"/>
+          <img id="preview_img" src="" class="img-fluid" alt="Image" width="45" height="45" style="border:1px solid green;"/>
           <strong style="color:green;">Added to basket</strong>
         </div>
         <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
-          <strong>Basket subtotal </strong> <span id="item_count">(1 item)</span>: <span id="basket_price" style="color:#8b0000;">£8.75 </span>
+          <strong>Basket subtotal </strong> <span id="item_count"></span>: <span id="basket_price" style="color:#8b0000;"></span>
           <br>
           <span style="font-size:14px">Thank you for shooping at eVeg.</span>
         </div>
