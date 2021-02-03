@@ -40,13 +40,13 @@
           <strong style="color:green;">Added to basket</strong>
         </div>
         <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
-          <strong>Basket subtotal <span id="item_count">(1 item)</span>:</strong> <span id="basket_price" style="color:#8b0000;">£8.75 </span>
+          <strong>Basket subtotal </strong> <span id="item_count">(1 item)</span>: <span id="basket_price" style="color:#8b0000;">£8.75 </span>
           <br>
           <span style="font-size:14px">Thank you for shooping at eVeg.</span>
         </div>
         <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 col-xs-12 text-center my-auto">
-          <button id="edit_basket" type="button" class="btn btn-secondary">Edit Basket</button>
-          <button id="proceed_checkout" type="button" class="btn btn-secondary">Proceed to Checkout</button>
+          <button id="edit_basket" type="button" class="btn btn-warning">Edit Basket</button>
+          <button id="proceed_checkout" type="button" class="btn btn-success">Proceed to Checkout</button>
           <span id="cross_preview" aria-hidden="true">&times;</span>
         </div>
       </div>
@@ -64,7 +64,7 @@
 
   <div class="container-fluid mb-5">
     <div id="products_table"></div>
-    <button id="view_basket" type="button" class="btn btn-secondary">View Basket</button>
+    <!-- <button id="view_basket" type="button" class="btn btn-secondary">View Basket</button> -->
   </div>
 
 </body>

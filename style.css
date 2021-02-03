@@ -25,7 +25,7 @@
 
 
 /*
-  AUTOFILL SERACH BAR
+  AUTOFILL SEARCH BAR
 */
 
 
@@ -76,7 +76,7 @@
 }
 
 
-
+/* BASKET PREVIEW */
 #cross_preview {
   position: absolute;
   margin-top:-1.20em;
@@ -84,8 +84,12 @@
   font-size:20px;
   color:#8b0000;
 }
+#cross_preview:hover {
+  cursor: pointer;
+}
 
 
+/* SCROLLING CHEVRON */
 
 #scroll_top{
   display: none;
@@ -104,4 +108,19 @@
 #scroll_top:hover {
   background-color: #343a40;
   color: white;
+}
+
+
+
+.credit-card-div  span {
+    padding-top:10px;
+        }
+.credit-card-div img {
+    padding-top:30px;
+}
+.credit-card-div .small-font {
+    font-size:9px;
+}
+.credit-card-div .pad-adjust {
+    padding-top:10px;
 }

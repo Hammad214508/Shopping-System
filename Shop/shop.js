@@ -31,7 +31,7 @@ $(document).ready(function(){
         $("#item_count").html("("+num_items+" "+txt+")");
         $("#preview_img").attr("src", "../img/"+  productDetails[product_name]["image"])
         var totals = calculateTotals();
-        $("#basket_price").html($.fn.roundToTwo(totals["total"]))
+        $("#basket_price").html("&pound;"+$.fn.roundToTwo(totals["total"]))
         window.scrollTo(0,0)
 
 

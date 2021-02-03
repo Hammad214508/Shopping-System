@@ -12,7 +12,7 @@
     <div id="main-menu" class="collapse navbar-collapse">
         <ul class="nav navbar-nav mr-auto mt-2 mt-lg-0">
           <li class="nav-item"><a id="nav-products" class="nav-link" href="<?php global $basedir; ?>/eveg-js/Shop/">Products</a></li>
-          <li class="nav-item"><a id="nav-products" class="nav-link" href="<?php global $basedir; ?>/eveg-js/Help/">Help</a></li>
+          <li class="nav-item"><a id="nav-help" class="nav-link" href="<?php global $basedir; ?>/eveg-js/Help/">Help</a></li>
           <li style="color:#343a40">fill</li>
           <li  class="nav-item">
             <div class="autocomplete input-group" >
