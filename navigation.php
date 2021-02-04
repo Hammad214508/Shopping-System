@@ -23,10 +23,6 @@
             </button>
           </li>
         </ul>
-
-
-
-
         <ul class="nav navbar-nav">
           <li id="nav-basket" class="nav-item">
             <a class="nav-link" href="<?php global $basedir; ?>/eveg-js/Basket/">Basket
@@ -43,5 +39,4 @@
 <script>
   updateBasketCount();
   autocomplete(document.getElementById("search"), food_items);
-
 </script>

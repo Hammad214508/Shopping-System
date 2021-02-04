@@ -39,7 +39,7 @@ $(document).ready(function(){
     }
 
     $.fn.roundToTwo = function(num){
-      return +(Math.round(num + "e+2")  + "e-2");
+      return parseFloat(Math.round(num + "e+2")  + "e-2").toFixed(2);;
     }
 
 

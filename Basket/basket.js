@@ -23,14 +23,14 @@ $(document).ready(function(){
       window.open("/eveg-js/Shop/","_self")
     })
 
-    $("#order").on("click", function(){
+    $(".checkout").on("click", function(){
       window.open("/eveg-js/Order/","_self")
     })
 
   }
 
   $.fn.roundToTwo = function(num){
-    return +(Math.round(num + "e+2")  + "e-2");
+    return parseFloat(Math.round(num + "e+2")  + "e-2").toFixed(2);;
   }
 
 
@@ -50,6 +50,10 @@ $(document).ready(function(){
       '  </div>'+
       '</div>'
     )
+
+    $("#num_items_2").html(num_items+" "+txt);
+    $("#price_2").html($.fn.roundToTwo(totals["total"]));
+    $("#ex_vat_2").html("ex VAT "+ $.fn.roundToTwo(totals["totalnovat"]))
 
   }
 

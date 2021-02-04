@@ -5,10 +5,10 @@ $(document).ready(function(){
         thispage.init = function(){
 
           $("#cancel").on("click", function(){
-            window.open("/eveg-js/Shop/","_self")
+            window.open("/eveg-js/Basket/","_self")
           })
 
-          $("#proceed").on("click", function(){
+          $("#pay_now").on("click", function(){
             setName();
             setAddress();
             setCardDetails();
