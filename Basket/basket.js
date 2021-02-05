@@ -98,13 +98,22 @@ $(document).ready(function(){
     )
   }
 
+  $.fn.isNumeric = function(str) {
+    if (typeof str != "string"){
+      return false
+    }
+    return !isNaN(str) && !isNaN(parseInt(str)) && Math.floor(str) == str
+  }
+
   $.fn.basket_item_events = function(){
     $(".quantity").on("change", function(){
       var item = $(this).attr("ref");
-      $("#total_price_"+item).html("&pound;" + $.fn.roundToTwo($(this).val()*productDetails[item]["price"]))
-      changeProductQuantity(item, $(this).val());
-      basket = readBasket();
-      $.fn.show_price();
+      if ($.fn.isNumeric($(this).val())){
+        $("#total_price_"+item).html("&pound;" + $.fn.roundToTwo($(this).val()*productDetails[item]["price"]))
+        changeProductQuantity(item, $(this).val());
+        basket = readBasket();
+        $.fn.show_price();
+      }
     })
 
     $(".dl_item").on("click", function(){

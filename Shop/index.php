@@ -64,7 +64,6 @@
 
   <div class="container-fluid mb-5">
     <div id="products_table"></div>
-    <!-- <button id="view_basket" type="button" class="btn btn-secondary">View Basket</button> -->
   </div>
 
 </body>

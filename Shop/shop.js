@@ -5,6 +5,13 @@ $(document).ready(function(){
         $("#nav-products").addClass("active");
     }
 
+    $.fn.isNumeric = function(str) {
+      if (typeof str != "string"){
+        return false
+      }
+      return !isNaN(str) && !isNaN(parseInt(str)) && Math.floor(str) == str 
+    }
+
     $.fn.render_products = function(){
       parent = $("#products_table")
       parent.empty();
@@ -23,18 +30,18 @@ $(document).ready(function(){
       $(".add_to_basket").on("click", function(){
         var product_name = $(this).attr("ref").toLowerCase();
         var product_quantity = $("#"+product_name+"_quantity").val();
-
-        addToBasket(product_name, product_quantity);
-        $("#basket_confirmation").show();
-        var num_items = parseInt($("#cart_count").html())
-        var txt = num_items == 1 ? "item" : "items"
-        $("#item_count").html("("+num_items+" "+txt+")");
-        $("#preview_img").attr("src", "../img/"+  productDetails[product_name]["image"])
-        var totals = calculateTotals();
-        $("#basket_price").html("&pound;"+$.fn.roundToTwo(totals["total"]))
-        window.scrollTo(0,0)
-
-
+        if ($.fn.isNumeric(product_quantity)){
+          addToBasket(product_name, product_quantity);
+          $("#basket_confirmation").show();
+          var num_items = parseInt($("#cart_count").html())
+          var txt = num_items == 1 ? "item" : "items"
+          $("#item_count").html("("+num_items+" "+txt+")");
+          $("#preview_img").attr("src", "../img/"+  productDetails[product_name]["image"])
+          var totals = calculateTotals();
+          $("#basket_price").html("&pound;"+$.fn.roundToTwo(totals["total"]))
+          $("#added_"+product_name).show();
+          window.scrollTo(0,0);
+        }
       })
     }
 
@@ -53,7 +60,8 @@ $(document).ready(function(){
         '    <h6>'+ productDetails[product]["units"]+'</h6>'+
         '    <h6> Price: &pound;' + productDetails[product]["price"]+'</h6>'+
         '    <h6>Quantity: <input id="'+productDetails[product]["name"].toLowerCase()+'_quantity" type="number" min="1" value="1" style="width: 40px;"> </h6>'+
-        '    <button ref="'+productDetails[product]["name"]+'" type="button" class="btn btn-success add_to_basket mt-4">Add to Basket</button>'+
+        '    <span id="added_'+productDetails[product]["name"].toLowerCase()+'" style="color:green; font-size:12px; display:none;"> <i class="fa fa-check mt-3 mb-1" aria-hidden="true"></i> Added to Basket</span><br>'+
+        '    <button ref="'+productDetails[product]["name"]+'" type="button" class="btn btn-success add_to_basket">Add to Basket</button>'+
         '  </div>'+
         '</div>'
       )
@@ -77,8 +85,6 @@ $(document).ready(function(){
             $("#proceed_checkout").on("click", function(){
               window.open("/eveg-js/Order/","_self")
             });
-
-
 
         };
 
