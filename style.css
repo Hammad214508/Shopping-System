@@ -24,6 +24,16 @@
 }
 
 
+.back_img {
+  background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5)), url('img.jpeg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;"
+}
+
+.white_font{
+  color: white;
+}
 /*
   AUTOFILL SEARCH BAR
 */

@@ -9,7 +9,7 @@ $(document).ready(function(){
       if (typeof str != "string"){
         return false
       }
-      return !isNaN(str) && !isNaN(parseInt(str)) && Math.floor(str) == str 
+      return !isNaN(str) && !isNaN(parseInt(str)) && Math.floor(str) == str
     }
 
     $.fn.render_products = function(){
@@ -54,7 +54,7 @@ $(document).ready(function(){
       return (
         '<div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12 mb-2">'+
         '  <div class="mypanel text-center" >'+
-        '    <img src="../img/'+ productDetails[product]["image"]+'" class="img-responsive" width="100px" height="90px">'+
+        '    <img src="../img/'+ productDetails[product]["image"]+'" class="img-responsive" width="100px" height="90px" style="border:1px solid black;">'+
         '    <h4 class="text-dark">'+productDetails[product]["name"]+'</h4>'+
         '    <h6>'+ productDetails[product]["description"]+'</h6>'+
         '    <h6>'+ productDetails[product]["units"]+'</h6>'+
