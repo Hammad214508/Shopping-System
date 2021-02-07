@@ -2,7 +2,7 @@
   <div class="container-fluid">
 
     <div class="navbar-header">
-      <a id="nav-home" class="navbar-brand" href="<?php global $basedir; ?>/eveg-js/Home">eVeg</a>
+      <a class="navbar-brand" href="<?php global $basedir; ?>/eveg-js/Home">eVeg</a>
     </div>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -11,9 +11,9 @@
 
     <div id="main-menu" class="collapse navbar-collapse">
         <ul class="nav navbar-nav mr-auto mt-2 mt-lg-0">
-          <li class="nav-item"><a id="nav-products" class="nav-link" href="<?php global $basedir; ?>/eveg-js/Shop/">Products</a></li>
+          <li class="nav-item"><a id="nav-about" class="nav-link" href="<?php global $basedir; ?>/eveg-js/Home/">About</a></li>
+          <li class="nav-item"><a id="nav-contact" class="nav-link" href="<?php global $basedir; ?>/eveg-js/Home/">Contact Us</a></li>
           <li class="nav-item"><a id="nav-help" class="nav-link" href="<?php global $basedir; ?>/eveg-js/Help/">Help</a></li>
-          <li style="color:#343a40">fill</li>
           <li  class="nav-item">
             <div class="autocomplete input-group" >
               <input type="search" id="search" class="form-control" placeholder="Search..." style="width:300px;"/>
@@ -24,6 +24,8 @@
           </li>
         </ul>
         <ul class="nav navbar-nav">
+          <li class="nav-item"><a id="nav-home" class="nav-link" href="<?php global $basedir; ?>/eveg-js/Home/">Home</a></li>
+          <li class="nav-item"><a id="nav-products" class="nav-link" href="<?php global $basedir; ?>/eveg-js/Shop/">Products</a></li>
           <li id="nav-basket" class="nav-item">
             <a class="nav-link" href="<?php global $basedir; ?>/eveg-js/Basket/">Basket
               <i class="fa fa-shopping-cart" aria-hidden="true" style="font-size:20px"></i>
