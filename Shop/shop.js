@@ -1,4 +1,7 @@
 $(document).ready(function(){
+    var search = "";
+    var food_items = ["carrots", "bananas", "coconut", "apples",
+                    "cherries", "tomatoes", "potatoes", "beans"];
 
     $.fn.activate_nav_bar = function(){
         $(".nav-item.active").removeClass("active");
@@ -17,14 +20,16 @@ $(document).ready(function(){
       parent.empty();
       var productDetails = getProductDetails();
       var i = 0;
+      filter = $("#search").val();
       for (var product in productDetails) {
-        if (i%4 == 0){
-          var row = $('<div class="row">');
-          parent.append(row)
+        if (product.toLowerCase().indexOf(filter) > -1){
+          if (i%4 == 0){
+            var row = $('<div class="row">');
+            parent.append(row)
+          }
+          row.append($.fn.get_product(productDetails, product));
+          i += 1
         }
-        row.append($.fn.get_product(productDetails, product));
-
-        i += 1
       }
 
       $(".add_to_basket").on("click", function(){
@@ -67,6 +72,23 @@ $(document).ready(function(){
       )
     }
 
+    $.fn.search_function = function() {
+        var input, filter;
+        input = document.getElementById("search");
+        filter = input.value.toUpperCase();
+
+        for (var i = 0; i < food_items.length; i++) {
+            txtValue = food_items[i];
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+              // console.log("display");
+              console.log(txtValue)
+            } else {
+              // console.log("hide");
+            }
+        }
+        console.log("");
+    }
+
     var pageready = (function(){
         var thispage = {};
         thispage.init = function(){
@@ -84,6 +106,25 @@ $(document).ready(function(){
 
             $("#proceed_checkout").on("click", function(){
               window.open("/eveg-js/Order/","_self")
+            });
+
+            $("#search_btn").on("click", function(){
+              search = $("#search").val();
+              $.fn.render_products();
+            })
+
+            $("#search").keyup(function(e){
+              // if (($(this).val()) == ""){
+              //   search = $(this).val();
+              //   $.fn.render_products();
+              // }
+              // if (e.which == 13){
+              //   search = $(this).val();
+              //   $.fn.render_products();
+              // }
+              search = $(this).val();
+              $.fn.render_products();
+
             });
 
         };
