@@ -78,30 +78,30 @@
                       <h5 class="text-muted"> Credit Card Number</h5>
                   </div>
                   <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2">
-                      <input type="text" class="form-control" placeholder="0000" required="" />
+                      <input id="card_1" type="text" ref="1" class="form-control credit_card_num" placeholder="0000" required="" style="width:110%" maxlength="4"/>
                   </div>
                   <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2">
-                      <input type="text" class="form-control" placeholder="0000" required="" />
+                      <input id="card_2" type="text" ref="2" class="form-control credit_card_num" placeholder="0000" required="" style="width:110%" maxlength="4"/>
                   </div>
                   <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2">
-                      <input type="text" class="form-control" placeholder="0000" required="" />
+                      <input id="card_3" type="text" ref="3" class="form-control credit_card_num" placeholder="0000" required="" style="width:110%" maxlength="4"/>
                   </div>
                   <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2">
-                      <input type="text" class="form-control" placeholder="0000" required="" />
+                      <input id="card_4" type="text" ref="4" class="form-control credit_card_num" placeholder="0000" required="" style="width:110%" maxlength="4"/>
                   </div>
                 </div>
                 <div class="row  mt-3">
                     <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2">
-                        <span class="help-block text-muted small-font"> Expiry Month</span>
-                        <input type="text" class="form-control" placeholder="MM" required="" />
+                        <span class="help-block text-muted small-font" > Expiry Month</span>
+                        <input id="expiry_month" type="text" class="form-control" placeholder="MM" required="" maxlength="2"/>
                     </div>
                     <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2">
                         <span class="help-block text-muted small-font">  Expiry Year</span>
-                        <input type="text" class="form-control" placeholder="YY" required="" />
+                        <input id="expiry_year" type="text" class="form-control" placeholder="YY" required="" maxlength="2"/>
                     </div>
                     <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2">
-                        <span class="help-block text-muted small-font">  CCV</span>
-                        <input type="text" class="form-control" placeholder="CCV" required="" />
+                        <span class="help-block text-muted small-font">  CVV</span>
+                        <input id="cvv" type="text" class="form-control" placeholder="CVV" required="" maxlength="3"/>
                     </div>
                     <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2 mt-auto">
                       <i class="fa fa-credit-card-alt" style="font-size:36px"></i>

@@ -36,7 +36,9 @@
        <h1>Shopping Basket </h1>
        <p>Manage your basket here.</p>
     </div>
+
   </div>
+
 
   <div class="container-fluid mb-5">
 
@@ -66,18 +68,22 @@
         <p id="price" class="bskt_not_empty" style="display:none"></p>
 
         <div id="basket_buttons" class="row bskt_not_empty mt-4" style="display:none">
-          <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 col-xs-12">
+          <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12 mb-2" style="display:block">
             <button id="continue_shopping" type="button" class="btn btn-warning">Continue Shopping</button>
-            <button  type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModalCenter">Clear Basket</button>
           </div>
-          <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12 col-xs-12 text-right">
+          <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12 mb-2">
+              <button  type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModalCenter">Clear Basket</button>
+          </div>
+          <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12"></div>
+          <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12">
             <button type="button" class="btn btn-success checkout">Proceed to Checkout</button>
           </div>
+
 
         </div>
 
       </div>
-      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 bskt_not_empty">
+      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 bskt_not_empty d-none d-lg-block">
         <div class="p-5" style="background-color:#e9ecef; margin-left: 0.4vw; display: inline-block;"  >
           <h5>
             Subtotal (<span id="num_items_2"></span>): &pound;<span id="price_2"></span>

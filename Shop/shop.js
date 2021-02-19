@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    var search = "";
+    var search = $("#search").val();
     var food_items = ["carrots", "bananas", "coconut", "apples",
                     "cherries", "tomatoes", "potatoes", "beans"];
 
@@ -57,7 +57,7 @@ $(document).ready(function(){
 
     $.fn.get_product = function(productDetails, product){
       return (
-        '<div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12 mb-2">'+
+        '<div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-xs-12 mb-2">'+
         '  <div class="mypanel text-center" >'+
         '    <img src="../img/'+ productDetails[product]["image"]+'" class="img-responsive" width="100px" height="90px" style="border:1px solid black;">'+
         '    <h4 class="text-dark">'+productDetails[product]["name"]+'</h4>'+

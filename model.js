@@ -63,6 +63,8 @@ function autocomplete(inp, arr) {
         if (currentFocus > -1) {
           /*and simulate a click on the "active" item:*/
           if (x) x[currentFocus].click();
+        }else{
+          // window.open("http://localhost/eveg-js/Shop/?search=123", "_self");
         }
       }
   });

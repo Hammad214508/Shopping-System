@@ -18,7 +18,7 @@
             <div class="autocomplete input-group" >
               <input type="search" id="search" class="form-control" placeholder="Search..." style="width:300px;"/>
             </div>
-            <button id="search_btn"type="button" class="btn btn-secondary" style="position:absolute; font-size:22px;">
+            <button id="search_btn" type="button" class="btn btn-secondary" style="position:absolute; font-size:22px;">
               <i class="fa fa-search"></i>
             </button>
           </li>

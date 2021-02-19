@@ -15,6 +15,51 @@ $(document).ready(function(){
             window.open("/eveg-js/Invoice/","_self")
           })
 
+          $("#card_1").on("input", function(){
+            if ($(this).val().length >= 4){
+              $("#card_2").focus();
+            }
+
+          })
+
+          $("#card_2").on("input", function(){
+            if ($(this).val().length >= 4){
+              $("#card_3").focus();
+            }
+
+            if ($(this).val() == ""){
+              $("#card_1").focus();
+            }
+          })
+
+          $("#card_3").on("input", function(){
+            if ($(this).val().length >= 4){
+              $("#card_4").focus();
+            }
+
+            if ($(this).val() == ""){
+              $("#card_2").focus();
+            }
+          })
+
+          $("#card_4").on("input", function(){
+            if ($(this).val() == ""){
+              $("#card_3").focus();
+            }
+          })
+
+
+          $("#expiry_month").on("input", function(){
+            if ($(this).val().length >= 2){
+              $("#expiry_year").focus();
+            }
+          })
+
+          $("#expiry_year").on("input", function(){
+            if ($(this).val().length >= 2){
+              $("#cvv").focus();
+            }
+          })
 
         };
         return thispage;
