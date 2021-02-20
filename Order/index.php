@@ -81,7 +81,7 @@
     <hr style="width: 500px; margin-left:0;">
     <div class="container-fluid">
     <div class="row mb-5">
-      <div class="col-md-6 col-md-offset-3">
+      <div class="col-xl-6 col-lg-6 col-md-11 col-sm-11 col-xs-11 col-md-offset-3">
         <div class="mb-3">
             <select class="custom-select mr-sm-2 mt-2" id="title" style="width: 150px;">
               <option selected disabled hidden>Card Type</option>
@@ -94,46 +94,62 @@
         <div class="credit-card-div p-4" style="background-color:#e9ecef; border-radius: 25px;">
             <div class="panel panel-default">
               <div class="panel-heading">
-                <div class="row">
-                  <div class="col-md-12 col-sm-12 col-xs-12">
-                      <h5 class="text-muted"> Credit Card Number</h5>
+                  <div class="row">
+                    <div class="col-xl-12 col-lg-12  col-md-12 col-sm-12 col-xs-12">
+                        <h5 class="text-muted"> Credit Card Number</h5>
+                    </div>
                   </div>
-                  <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2">
-                      <input id="card_1" name="card_1" type="text" ref="1" class="form-control credit_card_num only_numbers" required placeholder="0000" maxlength="4" minlength="4"/>
+                  <div class=" d-none d-lg-block d-md-block">
+                    <div class="row">
+                        <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                            <input id="card_1" name="card_1" type="text" ref="1" class="form-control credit_card_num only_numbers" required placeholder="0000" maxlength="4" minlength="4"/>
+                        </div>
+                        <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                            <input id="card_2" name="card_2" type="text" ref="2" class="form-control credit_card_num only_numbers" required placeholder="0000" maxlength="4" minlength="4"/>
+                        </div>
+                        <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                            <input id="card_3" name="card_3" type="text" ref="3" class="form-control credit_card_num only_numbers" required placeholder="0000" maxlength="4" minlength="4"/>
+                        </div>
+                        <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                            <input id="card_4" name="card_4" type="text" ref="4" class="form-control credit_card_num only_numbers" required placeholder="0000" maxlength="4" minlength="4"/>
+                        </div>
+                      </div>
                   </div>
-                  <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2">
-                      <input id="card_2" name="card_2" type="text" ref="2" class="form-control credit_card_num only_numbers" required placeholder="0000" maxlength="4" minlength="4"/>
-                  </div>
-                  <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2">
-                      <input id="card_3" name="card_3" type="text" ref="3" class="form-control credit_card_num only_numbers" required placeholder="0000" maxlength="4" minlength="4"/>
-                  </div>
-                  <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2">
-                      <input id="card_4" name="card_4" type="text" ref="4" class="form-control credit_card_num only_numbers" required placeholder="0000" maxlength="4" minlength="4"/>
+
+                  <div class="d-md-none">
+                    <div class="row ">
+                      <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                          <input id="cc" class="form-control" type="text" data-inputmask="'mask': '9999-9999-9999-9999'" />
+                        </div>
+                    </div>
                   </div>
                 </div>
+              </div>
+
+
 
                 <input id="cardnumber" type="text" style="display:none;">
 
                 <div class="row  mt-3">
-                    <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                    <div class="col-xl-2 col-lg-2 col-md-2 col-sm-3 col-xs-3">
                         <span class="help-block text-muted small-font" > Expiry Month</span>
                         <input id="month" name="month" type="text" class="form-control only_numbers" placeholder="MM" required maxlength="2"/>
                     </div>
-                    <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                    <div class="col-xl-2 col-lg-2 col-md-2 col-sm-3 col-xs-3">
                         <span class="help-block text-muted small-font">  Expiry Year</span>
                         <input id="year" name="year" type="text" class="form-control only_numbers" placeholder="YY" required maxlength="2"/>
                     </div>
-                    <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                    <div class="col-xl-2 col-lg-2 col-md-2 col-sm-3 col-xs-3">
                         <span class="help-block text-muted small-font">  CVV</span>
                         <input id="cvv" name="cvv" type="text" class="form-control only_numbers" placeholder="CVV" required maxlength="3"/>
                     </div>
-                    <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2 mt-auto">
+                    <div class="col-xl-2 col-lg-2 col-md-3 col-sm-3 col-xs-3 mt-auto d-none d-lg-block d-md-block">
                       <i class="fa fa-credit-card-alt" style="font-size:36px"></i>
                     </div>
                 </div>
                 <div class="row">
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                      <span id="expired" class="help-block small-font" style="color:#8b0000; display:none;"> This credit card has expired</span>
+                      <span id="expired" class="help-block" style="color:#8b0000; display:none; font-size:10px;"> This credit card has expired</span>
                   </div>
                 </div>
 
@@ -193,6 +209,7 @@ autocomplete(document.getElementById("country"), countries);
 
 <?php include ($_SERVER['DOCUMENT_ROOT'].'/eveg-js/footer.php') ?>
 <script src="<?php global $basedir; ?>/eveg-js/Order/order.js"></script>
+<script src="mask_input.js" type="text/javascript"></script>
 <script type="text/javascript">
 $("#full_form").validate();
 

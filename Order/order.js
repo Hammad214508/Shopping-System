@@ -8,7 +8,7 @@ $(document).ready(function(){
 
 
     $.fn.valid_form = function(){
-      if (!("#full_form").valid()){
+      if (!$("#full_form").valid()){
         return false;
       }
       var expiry_date = new Date(20+$("#year").val(), $("#month").val()-1, 1, 0, 0, 0, 0);
@@ -16,6 +16,7 @@ $(document).ready(function(){
         $("#expired").show();
         return false;
       }
+      return true;
     }
 
 
@@ -29,9 +30,6 @@ $(document).ready(function(){
           })
 
           $("#pay_now").on("click", function(){
-            console.log($("#full_form").valid())
-            alert("HERE")
-
             if ($.fn.valid_form()){
               setName();
               setAddress();
@@ -80,6 +78,9 @@ $(document).ready(function(){
             $("#cardnumber").val(card_num);
           })
 
+          $("#cc").on("input", function(){
+            $("#cardnumber").val($(this).val());
+          })
 
           $(".only_numbers").on("input", function(){
             var c = this.selectionStart,
@@ -99,15 +100,7 @@ $(document).ready(function(){
             }
           })
 
-          $("#year").on("input", function(){
-            if ($(this).val().length >= 2){
-              $("#cvv").focus();
-            }
-          })
-
-
-
-
+          $("#cc").mask("9999-9999-9999-9999");
 
 
         };
