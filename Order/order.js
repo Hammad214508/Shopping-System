@@ -1,5 +1,25 @@
 $(document).ready(function(){
 
+  $("#full_form").validate();
+
+  $("#full_form").submit(function(e) {
+      e.preventDefault();
+  });
+
+
+    $.fn.valid_form = function(){
+      if (!("#full_form").valid()){
+        return false;
+      }
+      var expiry_date = new Date(20+$("#year").val(), $("#month").val()-1, 1, 0, 0, 0, 0);
+      if (expiry_date < new Date()){
+        $("#expired").show();
+        return false;
+      }
+    }
+
+
+
     var pageready = (function(){
         var thispage = {};
         thispage.init = function(){
@@ -9,10 +29,15 @@ $(document).ready(function(){
           })
 
           $("#pay_now").on("click", function(){
-            setName();
-            setAddress();
-            setCardDetails();
-            window.open("/eveg-js/Invoice/","_self")
+            console.log($("#full_form").valid())
+            alert("HERE")
+
+            if ($.fn.valid_form()){
+              setName();
+              setAddress();
+              setCardDetails();
+              window.open("/eveg-js/Invoice/","_self")
+            }
           })
 
           $("#card_1").on("input", function(){
@@ -79,6 +104,9 @@ $(document).ready(function(){
               $("#cvv").focus();
             }
           })
+
+
+
 
 
 

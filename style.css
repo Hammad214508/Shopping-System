@@ -14,7 +14,6 @@
   padding-left: 9px;
   padding-right: 9px;
   -webkit-border-radius: 9px;
-  -moz-border-radius: 9px;
   border-radius: 9px;
 }
 
@@ -28,7 +27,7 @@
   background-image: url('img2');
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: cover;"
+  background-size: cover;
 }
 
 .white_font{
@@ -141,4 +140,13 @@
 
 .credit_card_num{
   width:110%;
+}
+
+.order_input_size{
+  width:20em;
+}
+
+label.error{
+  color:red;
+  font-size: 12px;
 }
