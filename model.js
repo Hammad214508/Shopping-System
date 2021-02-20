@@ -317,16 +317,16 @@ function getAddress() {
 }
 
 function setCardDetails() {
-  if (document.getElementById('solo').checked) {
+  if (document.getElementById('solo').selected) {
     document.cookie="cardtype=Solo;path=/";
   }
-  else if (document.getElementById('switch').checked) {
+  else if (document.getElementById('switch').selected) {
     document.cookie="cardtype=Switch;path=/";
   }
-  else if (document.getElementById('mastercard').checked) {
+  else if (document.getElementById('mastercard').selected) {
     document.cookie="cardtype=Mastercard;path=/";
   }
-  else if (document.getElementById('visa').checked) {
+  else if (document.getElementById('visa').selected) {
     document.cookie="cardtype=Visa;path=/";
   }
   document.cookie="cardnumber=" + document.getElementById('cardnumber').value + ";path=/";

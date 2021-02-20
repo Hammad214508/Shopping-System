@@ -43,7 +43,7 @@
   <div class="container-fluid mb-5">
 
     <div class="row">
-      <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-xs-12">
+      <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-xs-12">
         <div class="row bskt_not_empty">
           <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12 col-xs-12">
             <h2>Your Products</h2>
@@ -55,7 +55,6 @@
           </div>
         </div>
 
-        <!-- <table id="basket_items" class="bskt_not_empty" style="display:none"></table> -->
         <div id="basket_items" class="bskt_not_empty" style="display:none"></div>
 
         <div id="basket_empty" class="bskt_empty" style="display:none">
@@ -79,11 +78,10 @@
             <button type="button" class="btn btn-success checkout">Proceed to Checkout</button>
           </div>
 
-
         </div>
 
       </div>
-      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 bskt_not_empty d-none d-lg-block">
+      <div id="price_info_again" class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 bskt_not_empty text-right" style="display:none">
         <div class="p-5" style="background-color:#e9ecef; margin-left: 0.4vw; display: inline-block;"  >
           <h5>
             Subtotal (<span id="num_items_2"></span>): &pound;<span id="price_2"></span>

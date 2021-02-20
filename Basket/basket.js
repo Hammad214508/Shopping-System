@@ -2,6 +2,22 @@ $(document).ready(function(){
   var productDetails;
   var basket;
   var deleted_items = {}
+  var bootstrap_grid_size;
+  var is_empty = true;
+
+  $.fn.get_bootstrap_grid = function(width){
+    if(width < 768){
+       return "xs";
+    }else if(width <= 991){
+      return "sm";
+    }else if(width <= 1199){
+      return "md";
+    }else{
+      return "lg";
+    }
+  }
+
+  bootstrap_grid_size = $.fn.get_bootstrap_grid($(window).width());
 
   $.fn.activate_nav_bar = function(){
       $(".nav-item.active").removeClass("active");
@@ -138,6 +154,32 @@ $(document).ready(function(){
 
   }
 
+  $(window).on('resize',function(){
+    new_grid_size = $.fn.get_bootstrap_grid($(window).width());
+    if (new_grid_size != bootstrap_grid_size){
+      bootstrap_grid_size = new_grid_size;
+      $.fn.resize_screen_changes();
+    }
+  });
+
+  $.fn.resize_screen_changes = function(){
+    if(bootstrap_grid_size == "xs"){
+       $("#price_info_again").hide();
+       $("#basket_buttons").addClass('text-center')
+    }else if(bootstrap_grid_size == "sm"){
+      $("#price_info_again").hide();
+      $("#basket_buttons").addClass('text-center')
+    }else if(bootstrap_grid_size == "md"){
+      if(!is_empty){$("#price_info_again").show();}
+      $("#basket_buttons").removeClass('text-center')
+    }else{
+      if(!is_empty){$("#price_info_again").show();}
+      $("#basket_buttons").removeClass('text-center')
+
+    }
+  };
+
+
   var pageready = (function(){
       var thispage = {};
       thispage.init = function(){
@@ -146,14 +188,21 @@ $(document).ready(function(){
         $.fn.show_price();
         var cart_count = $("#cart_count").html();
         if (cart_count != "0"){
+          is_empty = false;
           $(".bskt_empty").hide();
           $(".bskt_not_empty").show();
+          $("#price_info_again").show();
           $.fn.render_basket_items();
           $.fn.basket_item_events();
         }else{
+          is_empty = true;
           $(".bskt_empty").show();
           $(".bskt_not_empty").hide();
+          $("#price_info_again").hide();
         }
+
+        $.fn.resize_screen_changes();
+
 
       };
 

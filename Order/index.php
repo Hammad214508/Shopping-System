@@ -27,7 +27,7 @@
         Name:
       </div>
       <div class="row mt-2">
-        <input id="firstname" type="text" class="form-control" style="width:20em;"  placeholder="First Name">
+        <input id="firstname" type="text" class="form-control" style="width:20em;"  placeholder="First Name" autofocus>
       </div>
       <div class="row mt-2">
         <input id="surname" type="text" class="form-control" style="width:20em;"  placeholder="Surname">
@@ -61,13 +61,12 @@
     <div class="row mb-5">
       <div class="col-md-6 col-md-offset-3">
         <div class="mb-3">
-            <!-- <span>Card Type</span><br> -->
             <select class="custom-select mr-sm-2 mt-2" id="title" style="width: 150px;">
               <option selected disabled hidden>Card Type</option>
-              <option value="Solo">Solo</option>
-              <option value="Switch">Switch</option>
-              <option value="Mastercard">Mastercard</option>
-              <option value="Visa">Visa</option>
+              <option id="solo" value="Solo">Solo</option>
+              <option id="switch" value="Switch">Switch</option>
+              <option id="mastercard" value="Mastercard">Mastercard</option>
+              <option id="visa" value="Visa">Visa</option>
             </select>
         </div>
         <div class="credit-card-div p-4" style="background-color:#e9ecef; border-radius: 25px;">
@@ -78,30 +77,33 @@
                       <h5 class="text-muted"> Credit Card Number</h5>
                   </div>
                   <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2">
-                      <input id="card_1" type="text" ref="1" class="form-control credit_card_num" placeholder="0000" required="" style="width:110%" maxlength="4"/>
+                      <input id="card_1" type="text" ref="1" class="form-control credit_card_num only_numbers" placeholder="0000" maxlength="4"/>
                   </div>
                   <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2">
-                      <input id="card_2" type="text" ref="2" class="form-control credit_card_num" placeholder="0000" required="" style="width:110%" maxlength="4"/>
+                      <input id="card_2" type="text" ref="2" class="form-control credit_card_num only_numbers" placeholder="0000" maxlength="4"/>
                   </div>
                   <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2">
-                      <input id="card_3" type="text" ref="3" class="form-control credit_card_num" placeholder="0000" required="" style="width:110%" maxlength="4"/>
+                      <input id="card_3" type="text" ref="3" class="form-control credit_card_num only_numbers" placeholder="0000" maxlength="4"/>
                   </div>
                   <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2">
-                      <input id="card_4" type="text" ref="4" class="form-control credit_card_num" placeholder="0000" required="" style="width:110%" maxlength="4"/>
+                      <input id="card_4" type="text" ref="4" class="form-control credit_card_num only_numbers" placeholder="0000" maxlength="4"/>
                   </div>
                 </div>
+
+                <input id="cardnumber" type="text" style="display:none;">
+
                 <div class="row  mt-3">
                     <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2">
                         <span class="help-block text-muted small-font" > Expiry Month</span>
-                        <input id="expiry_month" type="text" class="form-control" placeholder="MM" required="" maxlength="2"/>
+                        <input id="month" type="text" class="form-control only_numbers" placeholder="MM" maxlength="2"/>
                     </div>
                     <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2">
                         <span class="help-block text-muted small-font">  Expiry Year</span>
-                        <input id="expiry_year" type="text" class="form-control" placeholder="YY" required="" maxlength="2"/>
+                        <input id="year" type="text" class="form-control only_numbers" placeholder="YY" maxlength="2"/>
                     </div>
                     <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2">
                         <span class="help-block text-muted small-font">  CVV</span>
-                        <input id="cvv" type="text" class="form-control" placeholder="CVV" required="" maxlength="3"/>
+                        <input id="cvv" type="text" class="form-control only_numbers" placeholder="CVV" maxlength="3"/>
                     </div>
                     <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2 mt-auto">
                       <i class="fa fa-credit-card-alt" style="font-size:36px"></i>
@@ -109,7 +111,7 @@
                 </div>
                 <div class="row mt-3">
                     <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-xs-8 pad-adjust">
-                        <input type="text" class="form-control" placeholder="Name On The Card" required="" />
+                        <input type="text" class="form-control" placeholder="Name On The Card" />
                     </div>
                 </div>
                 <div class="row mt-4">

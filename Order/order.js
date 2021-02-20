@@ -30,6 +30,7 @@ $(document).ready(function(){
             if ($(this).val() == ""){
               $("#card_1").focus();
             }
+
           })
 
           $("#card_3").on("input", function(){
@@ -46,20 +47,40 @@ $(document).ready(function(){
             if ($(this).val() == ""){
               $("#card_3").focus();
             }
+
+          })
+
+          $(".credit_card_num").on("input", function(){
+            var card_num = $("#card_1").val()+ $("#card_2").val()+ $("#card_3").val()+ $("#card_4").val();
+            $("#cardnumber").val(card_num);
           })
 
 
-          $("#expiry_month").on("input", function(){
+          $(".only_numbers").on("input", function(){
+            var c = this.selectionStart,
+                r = /[^0-9]/gi,
+                v = $(this).val();
+            if(r.test(v)) {
+              $(this).val(v.replace(r, ''));
+              c--;
+            }
+            this.setSelectionRange(c, c);
+          })
+
+
+          $("#month").on("input", function(){
             if ($(this).val().length >= 2){
-              $("#expiry_year").focus();
+              $("#year").focus();
             }
           })
 
-          $("#expiry_year").on("input", function(){
+          $("#year").on("input", function(){
             if ($(this).val().length >= 2){
               $("#cvv").focus();
             }
           })
+
+
 
         };
         return thispage;
