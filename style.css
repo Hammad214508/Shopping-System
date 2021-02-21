@@ -150,3 +150,14 @@ label.error{
   color:#8b0000;
   font-size: 12px;
 }
+
+.a4{
+  /* width: 210mm;
+  height: 297mm; */
+  border:1px solid black;
+}
+
+
+.show_border{
+  border:1px solid black;
+}

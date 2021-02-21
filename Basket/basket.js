@@ -61,7 +61,7 @@ $(document).ready(function(){
       '  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12  align-self-end">'+
       '    <div class="text-right">'+
       '      <span>Subtotal ('+num_items+' '+txt+'): <strong>&pound;'+$.fn.roundToTwo(totals["total"])+'</strong><span> <br>'+
-      '     <span style="font-size:12px;">ex VAT '+ $.fn.roundToTwo(totals["totalnovat"])+' </span>'+
+      '     <span style="font-size:12px;">ex. VAT '+ $.fn.roundToTwo(totals["totalnovat"])+' </span>'+
       '    </div>'+
       '  </div>'+
       '</div>'
@@ -69,7 +69,7 @@ $(document).ready(function(){
 
     $("#num_items_2").html(num_items+" "+txt);
     $("#price_2").html($.fn.roundToTwo(totals["total"]));
-    $("#ex_vat_2").html("ex VAT "+ $.fn.roundToTwo(totals["totalnovat"]))
+    $("#ex_vat_2").html("ex. VAT "+ $.fn.roundToTwo(totals["totalnovat"]))
 
   }
 
