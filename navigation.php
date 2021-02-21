@@ -42,6 +42,10 @@
   </div>
 </nav>
 
+<button onclick="topFunction()" id="scroll_top" title="Go to top">
+  <i class="fa fa-chevron-up" aria-hidden="true"></i>
+</button>
+
 <script>
   updateBasketCount();
   autocomplete(document.getElementById("search"), food_items);

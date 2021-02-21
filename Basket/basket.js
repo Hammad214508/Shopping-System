@@ -178,7 +178,7 @@ $(document).ready(function(){
     }else{
       if(!is_empty){$("#price_info_again").show();}
       $("#basket_buttons").removeClass('text-center')
-      $("#checkout_btn").addClass(className)("text-right")
+      $("#checkout_btn").addClass("text-right");
 
 
     }
