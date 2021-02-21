@@ -26,14 +26,6 @@
   background-color: #c67605;
 }
 
- /* linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), */
-.back_img {
-  background-image: url('tree.png');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-}
-
 .white_font{
   color: white;
 }
@@ -62,23 +54,24 @@
   left: 0;
   right: 0;
 }
+
 .autocomplete-items div {
   padding: 10px;
   cursor: pointer;
   background-color: #fff;
   border-bottom: 1px solid #d4d4d4;
 }
+
 .autocomplete-items div:hover {
   /*when hovering an item:*/
   background-color: #e9e9e9;
 }
+
 .autocomplete-active {
   /*when navigating through the items using the arrow keys:*/
   background-color: DodgerBlue !important;
   color: #ffffff;
 }
-
-
 
 /* FOOD IETM BOXES */
 .mypanel{
@@ -122,6 +115,7 @@
   padding: 15px;
   border-radius: 10px;
 }
+
 #scroll_top:hover {
   background-color: #343a40;
   color: white;
@@ -164,12 +158,4 @@ label.error{
 
 .show_border{
   border:1px solid black;
-}
-
-.centered {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  /* bring your own prefixes */
-  transform: translate(-50%, -50%);
 }
