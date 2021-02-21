@@ -43,6 +43,14 @@ $(document).ready(function(){
         }
       }
 
+      if(i == 0){
+        $("#no_res").show();
+        $("#search_txt").html($("#search").val())
+      }else{
+        $("#no_res").hide();
+      }
+
+
       $(".add_to_basket").on("click", function(){
         var product_name = $(this).attr("ref").toLowerCase();
         var product_quantity = $("#"+product_name+"_quantity").val();

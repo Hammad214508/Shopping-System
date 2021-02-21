@@ -1,5 +1,5 @@
 <head>
-    <title>Shop</title>
+    <title>Contact</title>
     <?php include ($_SERVER['DOCUMENT_ROOT'].'/eveg-js/header.php') ?>
 </head>
 
@@ -32,4 +32,4 @@
 </body>
 
 <?php include ($_SERVER['DOCUMENT_ROOT'].'/eveg-js/footer.php') ?>
-<!-- <script src="<?php global $basedir; ?>/eveg-js/Help/help.js"></script> -->
+<script src="<?php global $basedir; ?>/eveg-js/Contact/contact.js"></script>

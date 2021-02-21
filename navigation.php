@@ -13,18 +13,20 @@
 
     <div id="main-menu" class="collapse navbar-collapse">
         <ul class="nav navbar-nav mr-auto mt-2 mt-lg-0">
-          <li class="nav-item"><a id="nav-about" class="nav-link" href="<?php global $basedir; ?>/eveg-js/Home/">About</a></li>
+          <!-- <li class="nav-item"><a id="nav-about" class="nav-link" href="<?php global $basedir; ?>/eveg-js/About/">About</a></li> -->
           <li class="nav-item"><a id="nav-contact" class="nav-link" href="<?php global $basedir; ?>/eveg-js/Contact/">Contact Us</a></li>
           <li class="nav-item"><a id="nav-help" class="nav-link" href="<?php global $basedir; ?>/eveg-js/Help/">Help</a></li>
-          <li class="nav-item" style="color:#343a40">123</li>
+          <div class="d-none d-lg-block">
+            <li class="nav-item" style="color:#343a40">123</li>
+          </div>
 
-          <li  class="nav-item">
-            <div class="autocomplete input-group" >
-              <input type="search" id="search" class="form-control" placeholder="Search..." style="width:300px;"/>
+          <li class="nav-item">
+            <div class="autocomplete" style="display:inline;">
+              <input type="search" id="search" class="form-control" placeholder="Search..." style="width:18.75em;display:inline;"/>
+              <button id="search_btn" type="button" class="btn btn-secondary" style="position:absolute; font-size:22px; display:inline;">
+                <i class="fa fa-search"></i>
+              </button>
             </div>
-            <button id="search_btn" type="button" class="btn btn-secondary" style="position:absolute; font-size:22px;">
-              <i class="fa fa-search"></i>
-            </button>
           </li>
         </ul>
         <ul class="nav navbar-nav">
