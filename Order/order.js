@@ -1,10 +1,15 @@
 $(document).ready(function(){
+    $(window).keydown(function(event){
+      if(event.keyCode == 13){
+          event.preventDefault();
+      }
+    });
 
-  $("#full_form").validate();
+    $("#full_form").validate();
 
-  $("#full_form").submit(function(e) {
-      e.preventDefault();
-  });
+    $("#full_form").submit(function(e) {
+        e.preventDefault();
+    });
 
 
     $.fn.valid_form = function(){

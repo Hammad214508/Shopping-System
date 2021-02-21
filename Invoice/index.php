@@ -6,7 +6,6 @@
 <body>
   <?php include ($_SERVER['DOCUMENT_ROOT'].'/eveg-js/navigation.php');?>
 
-
   <div class="container-fluid mb-5">
     <div class="row">
       <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-xs-8">
@@ -18,7 +17,6 @@
             </div>
             <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-xs-8 text-right">
               <img style="max-width:150px; max-height:150px;width: auto;height: auto;" src="../logo.png">
-
             </div>
           </div>
 
@@ -53,31 +51,38 @@
 
           <hr>
 
-          <div class="row mt-4">
-            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-xs-3">
-              <h5>Qty</h5>
-            </div>
-            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-xs-3">
-              <h5>Product</h5>
-            </div>
-            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-xs-3">
-              <h5>Unit Price</h5>
-            </div>
-            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-xs-3">
-              <h5>Amount</h5>
+          <div id="sm_header" style="display:none;">
+            <h5>Products Bought</h5>
+          </div>
+
+          <div id="lg_header" style="display:none;">
+            <div class="row mt-4">
+              <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                <h5>Qty</h5>
+              </div>
+              <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                <h5>Product</h5>
+              </div>
+              <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                <h5>Unit Price</h5>
+              </div>
+              <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                <h5>Amount</h5>
+              </div>
             </div>
           </div>
 
           <hr>
+
           <div id="products"></div>
 
           <div class="row mt-2">
-            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6"></div>
+            <div class="col-xl-6 col-lg-6"></div>
 
-            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-xs-3">
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-xs-6">
               <h3>Total</h3>
             </div>
-            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-xs-3">
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-xs-6">
               <h3 id="price"></h3>
               <p id="ex_vat" style="font-size:12px"></p>
             </div>
@@ -98,7 +103,7 @@
 
 
       <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-4">
-        <button onclick="CreatePDFfromHTML()" class="btn btn-secondary">Generate PDF</button> <br>
+        <button onclick="CreatePDFfromHTML()" class="btn btn-secondary mt-3">Generate PDF</button> <br>
         <button  onclick="print()" class="btn btn-secondary mt-3">Print Invoice</button>
       </div>
 

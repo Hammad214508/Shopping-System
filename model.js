@@ -43,10 +43,6 @@ function autocomplete(inp, arr) {
       }
   });
 
-
-
-
-
   /*execute a function presses a key on the keyboard:*/
   inp.addEventListener("keydown", function(e) {
       var x = document.getElementById(this.id + "autocomplete-list");
@@ -70,7 +66,9 @@ function autocomplete(inp, arr) {
           /*and simulate a click on the "active" item:*/
           if (x){
             x[currentFocus].click();
-            document.getElementById("search_btn").click();
+            if (inp.id == search){
+              document.getElementById("search_btn").click();
+            }
           };
         }
       }

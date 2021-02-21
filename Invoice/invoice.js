@@ -1,5 +1,21 @@
 $(document).ready(function(){
 
+  var bootstrap_grid_size;
+
+  $.fn.get_bootstrap_grid = function(width){
+    if(width < 768){
+       return "xs";
+    }else if(width <= 991){
+      return "sm";
+    }else if(width <= 1199){
+      return "md";
+    }else{
+      return "lg";
+    }
+  }
+
+  bootstrap_grid_size = $.fn.get_bootstrap_grid($(window).width());
+
   $.fn.render_client_name = function(){
     var clientName = getName();
 
@@ -34,13 +50,23 @@ $(document).ready(function(){
     var basket = readBasket();
     var productDetails = getProductDetails();
     parent = $("#products")
+    parent.empty()
     for (var product in basket) {
       if (basket[product] > 0) {
         var qty = basket[product];
         var name = productDetails[product]["name"] + ' ' + productDetails[product]["units"];
         var price = productDetails[product]["price"];
         var amount = qty*price
-        parent.append($.fn.product_template(qty, name, price, amount))
+        if(bootstrap_grid_size == "xs" || bootstrap_grid_size == "sm"){
+          $("#sm_header").show();
+          $("#lg_header").hide();
+          parent.append($.fn.product_template_small(qty, name, price, amount))
+        }else{
+          $("#sm_header").hide();
+          $("#lg_header").show();
+          parent.append($.fn.product_template(qty, name, price, amount))
+        }
+
       }
     }
   }
@@ -64,6 +90,12 @@ $(document).ready(function(){
     )
   }
 
+  $.fn.product_template_small = function(qty, name, unit_price, amount){
+    return (
+      '<p>'+qty+'x <strong>'+name+' </strong>'+ amount+'</p>'
+    )
+  }
+
   $.fn.roundToTwo = function(num){
     return parseFloat(Math.round(num + "e+2")  + "e-2").toFixed(2);;
   }
@@ -71,7 +103,7 @@ $(document).ready(function(){
 
   $.fn.render_price = function(){
     var totals = calculateTotals();
-    $("#price").html("&pound;"+totals["total"])
+    $("#price").html("&pound;"+  $.fn.roundToTwo(totals["total"]))
     $('#ex_vat').html("ex. Vat &pound;"+$.fn.roundToTwo(totals["totalnovat"]))
 
   }
@@ -82,6 +114,15 @@ $(document).ready(function(){
     $("#card_type").html(cardDetails['cardtype'] + ' ' + cardDetails['cardnumber'].substr(-4))
 
   }
+
+
+  $(window).on('resize',function(){
+    new_grid_size = $.fn.get_bootstrap_grid($(window).width());
+    if (new_grid_size != bootstrap_grid_size){
+      bootstrap_grid_size = new_grid_size;
+      $.fn.render_products();
+    }
+  });
 
 
 
