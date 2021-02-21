@@ -74,7 +74,7 @@ $(document).ready(function(){
         '    <h4 class="text-dark">'+productDetails[product]["name"]+'</h4>'+
         '    <h6>'+ productDetails[product]["description"]+'</h6>'+
         '    <h6>'+ productDetails[product]["units"]+'</h6>'+
-        '    <h6> Price: &pound;' + productDetails[product]["price"]+'</h6>'+
+        '    <h6> Price: <strong>&pound;' + productDetails[product]["price"]+'</strong></h6>'+
         '    <h6>Quantity: <input id="'+productDetails[product]["name"].toLowerCase()+'_quantity" type="number" min="1" value="1" style="width: 40px;"> </h6>'+
         '    <span id="added_'+productDetails[product]["name"].toLowerCase()+'" style="color:green; font-size:12px; display:none;"> <i class="fa fa-check mt-3 mb-1" aria-hidden="true"></i> Added to Basket</span><br>'+
         '    <button ref="'+productDetails[product]["name"]+'" type="button" class="btn btn-success add_to_basket">Add to Basket</button>'+

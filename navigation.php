@@ -14,7 +14,7 @@
     <div id="main-menu" class="collapse navbar-collapse">
         <ul class="nav navbar-nav mr-auto mt-2 mt-lg-0">
           <li class="nav-item"><a id="nav-about" class="nav-link" href="<?php global $basedir; ?>/eveg-js/Home/">About</a></li>
-          <li class="nav-item"><a id="nav-contact" class="nav-link" href="<?php global $basedir; ?>/eveg-js/Home/">Contact Us</a></li>
+          <li class="nav-item"><a id="nav-contact" class="nav-link" href="<?php global $basedir; ?>/eveg-js/Contact/">Contact Us</a></li>
           <li class="nav-item"><a id="nav-help" class="nav-link" href="<?php global $basedir; ?>/eveg-js/Help/">Help</a></li>
           <li class="nav-item" style="color:#343a40">123</li>
 

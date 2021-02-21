@@ -105,6 +105,12 @@ $(document).ready(function(){
             }
           })
 
+          $("#year").on("input", function(){
+            if ($(this).val().length >= 2){
+              $("#cvv").focus();
+            }
+          })
+
           $("#cc").mask("9999-9999-9999-9999");
 
 
