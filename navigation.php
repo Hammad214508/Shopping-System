@@ -22,10 +22,13 @@
 
           <li class="nav-item">
             <div class="autocomplete" style="display:inline;">
-              <input type="search" id="search" class="form-control" placeholder="Search..." style="width:18.75em;display:inline;"/>
-              <button id="search_btn" type="button" class="btn btn-secondary" style="position:absolute; font-size:22px; display:inline;">
-                <i class="fa fa-search"></i>
-              </button>
+              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <input type="search" id="search" class="form-control" placeholder="Search..." style="width: auto;display:inline;"/>
+                    <button id="search_btn" type="button" class="btn btn-secondary" style="position:absolute; font-size:22px; display:inline;">
+                      <i class="fa fa-search"></i>
+                    </button>
+              </div>
+
             </div>
           </li>
         </ul>
