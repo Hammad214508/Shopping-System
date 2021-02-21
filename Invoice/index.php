@@ -5,11 +5,13 @@
 
 <body>
   <?php include ($_SERVER['DOCUMENT_ROOT'].'/eveg-js/navigation.php');?>
+
+  <button onclick="topFunction()" id="scroll_top" title="Go to top">
+    <i class="fa fa-chevron-up" aria-hidden="true"></i>
+  </button>
+  
   <div class="container-fluid mb-5">
     <div class="row">
-
-
-
       <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-xs-8">
         <div id="content" class="p-4 a4 html-content">
 
@@ -98,15 +100,9 @@
       </div>
 
 
-
-
-
-
-
-
       <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-4">
-        <div id="editor"></div>
-        <button id="cmd" onclick="CreatePDFfromHTML()">generate PDF</button>
+        <button onclick="CreatePDFfromHTML()" class="btn btn-secondary">Generate PDF</button> <br>
+        <button onclick="print()" class="btn btn-secondary mt-3">Print Invoice</button>
       </div>
 
     </div>

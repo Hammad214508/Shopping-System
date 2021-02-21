@@ -9,27 +9,6 @@
     <i class="fa fa-chevron-up" aria-hidden="true"></i>
   </button>
 
-  <script type="text/javascript">
-    window.onscroll = function()
-    {
-      scrollFunction()
-    };
-
-    function scrollFunction(){
-      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        document.getElementById("scroll_top").style.display = "block";
-      } else {
-        document.getElementById("scroll_top").style.display = "none";
-      }
-    }
-
-    function topFunction() {
-      document.body.scrollTop = 0;
-      document.documentElement.scrollTop = 0;
-    }
-
-
-  </script>
 
   <div class="container-fluid">
     <div class="jumbotron">
@@ -74,7 +53,7 @@
               <button  type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModalCenter">Clear Basket</button>
           </div>
           <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12"></div>
-          <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12">
+          <div id="checkout_btn" class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12 text-right">
             <button type="button" class="btn btn-success checkout">Proceed to Checkout</button>
           </div>
 

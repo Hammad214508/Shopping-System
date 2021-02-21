@@ -3,6 +3,17 @@ $(document).ready(function(){
     var food_items = ["carrots", "bananas", "coconut", "apples",
                     "cherries", "tomatoes", "potatoes", "beans"];
 
+    $.fn.getUrlVars = function(){
+      var vars = [], hash;
+      var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+      for(var i = 0; i < hashes.length; i++){
+          hash = hashes[i].split('=');
+          vars.push(hash[0]);
+          vars[hash[0]] = hash[1];
+      }
+      return vars;
+    }
+
     $.fn.activate_nav_bar = function(){
         $(".nav-item.active").removeClass("active");
         $("#nav-products").addClass("active");
@@ -108,24 +119,36 @@ $(document).ready(function(){
               window.open("/eveg-js/Order/","_self")
             });
 
+
             $("#search_btn").on("click", function(){
+              event.preventDefault();
               search = $("#search").val();
               $.fn.render_products();
             })
 
             $("#search").keyup(function(e){
-              // if (($(this).val()) == ""){
-              //   search = $(this).val();
-              //   $.fn.render_products();
-              // }
-              // if (e.which == 13){
-              //   search = $(this).val();
-              //   $.fn.render_products();
-              // }
-              search = $(this).val();
-              $.fn.render_products();
+              if (($(this).val()) == ""){
+                search = $(this).val();
+                $.fn.render_products();
+              }
+              if (e.which == 13){
+                search = $(this).val();
+                $.fn.render_products();
+              }
+              // search = $(this).val();
+              // $.fn.render_products();
 
             });
+
+
+            if (location.search){
+              search_text = $.fn.getUrlVars();
+              txt = search_text["search"];
+              $("#search").val(txt);
+              search =   $("#search").val();
+              $.fn.render_products();
+
+            }
 
         };
 

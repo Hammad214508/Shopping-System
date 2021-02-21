@@ -10,27 +10,6 @@
     <i class="fa fa-chevron-up" aria-hidden="true"></i>
   </button>
 
-  <script type="text/javascript">
-    window.onscroll = function()
-    {
-      scrollFunction()
-    };
-
-    function scrollFunction(){
-      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        document.getElementById("scroll_top").style.display = "block";
-      } else {
-        document.getElementById("scroll_top").style.display = "none";
-      }
-    }
-
-    function topFunction() {
-      document.body.scrollTop = 0;
-      document.documentElement.scrollTop = 0;
-    }
-  </script>
-
-
   <div id="basket_confirmation" class="container" style="display:none;">
     <div class="alert alert-dark" role="alert">
       <div class="row">

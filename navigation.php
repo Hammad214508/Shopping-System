@@ -16,6 +16,8 @@
           <li class="nav-item"><a id="nav-about" class="nav-link" href="<?php global $basedir; ?>/eveg-js/Home/">About</a></li>
           <li class="nav-item"><a id="nav-contact" class="nav-link" href="<?php global $basedir; ?>/eveg-js/Home/">Contact Us</a></li>
           <li class="nav-item"><a id="nav-help" class="nav-link" href="<?php global $basedir; ?>/eveg-js/Help/">Help</a></li>
+          <li class="nav-item" style="color:#343a40">123</li>
+
           <li  class="nav-item">
             <div class="autocomplete input-group" >
               <input type="search" id="search" class="form-control" placeholder="Search..." style="width:300px;"/>

@@ -5,7 +5,9 @@
 
 <body onload="createEmptyOrder();">
   <?php include ($_SERVER['DOCUMENT_ROOT'].'/eveg-js/navigation.php');?>
-
+  <button onclick="topFunction()" id="scroll_top" title="Go to top">
+    <i class="fa fa-chevron-up" aria-hidden="true"></i>
+  </button>
   <div class="container-fluid">
     <div class="jumbotron">
        <h1>Checkout</h1>
