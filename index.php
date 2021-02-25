@@ -11,7 +11,7 @@
 <body>
     <?php
         include ($_SERVER['DOCUMENT_ROOT'].'/eveg-js/navigation.php');
-        header('location: '.$_SERVER['DOCUMENT_ROOT'].'/eveg-js/Home/');
+        header('location: /eveg-js/Home/');
      ?>
 
 </body>

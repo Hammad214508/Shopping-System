@@ -21,11 +21,11 @@
         <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
           <strong>Basket subtotal </strong> <span id="item_count"></span>: <span id="basket_price" style="color:#8b0000;"></span>
           <br>
-          <span style="font-size:14px">Thank you for shooping at eVeg.</span>
+          <span class="d-none d-lg-block d-md-block" style="font-size:14px">Thank you for shooping at eVeg.</span>
         </div>
         <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 col-xs-12 text-center my-auto">
-          <button id="edit_basket" type="button" class="btn btn-warning">Edit Basket</button>
-          <button id="proceed_checkout" type="button" class="btn btn-success">Proceed to Checkout</button>
+          <button id="edit_basket" type="button" class="btn btn-warning mt-2">Edit Basket</button>
+          <button id="proceed_checkout" type="button" class="btn btn-success mt-2">Proceed to Checkout</button>
           <span id="cross_preview" aria-hidden="true">&times;</span>
         </div>
       </div>

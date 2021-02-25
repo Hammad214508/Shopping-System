@@ -210,6 +210,3 @@ autocomplete(document.getElementById("country"), countries);
 <?php include ($_SERVER['DOCUMENT_ROOT'].'/eveg-js/footer.php') ?>
 <script src="<?php global $basedir; ?>/eveg-js/Order/order.js"></script>
 <script src="mask_input.js" type="text/javascript"></script>
-<!-- <script type="text/javascript">
-$("#full_form").validate();
-</script> -->

@@ -163,24 +163,14 @@ $(document).ready(function(){
   });
 
   $.fn.resize_screen_changes = function(){
-    if(bootstrap_grid_size == "xs"){
+    if(bootstrap_grid_size == "xs" || bootstrap_grid_size == "sm"){
        $("#price_info_again").hide();
        $("#checkout_btn").removeClass("text-right")
        $("#basket_buttons").addClass('text-center')
-    }else if(bootstrap_grid_size == "sm"){
-      $("#price_info_again").hide();
-      $("#checkout_btn").removeClass("text-right")
-      $("#basket_buttons").addClass('text-center')
-    }else if(bootstrap_grid_size == "md"){
-      if(!is_empty){$("#price_info_again").show();}
-      $("#basket_buttons").removeClass('text-center')
-      $("#checkout_btn").addClass(className)("text-right")
     }else{
       if(!is_empty){$("#price_info_again").show();}
       $("#basket_buttons").removeClass('text-center')
       $("#checkout_btn").addClass("text-right");
-
-
     }
   };
 
