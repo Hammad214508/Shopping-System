@@ -115,58 +115,58 @@ document.addEventListener("click", function (e) {
 function getProductDetails() {
   productDetails = {};
   productDetails["carrots"] = {};
-  productDetails["carrots"]["image"] = "carrots.gif";
+  productDetails["carrots"]["image"] = "carrots.jpg";
   productDetails["carrots"]["name"] = "Carrots";
-  productDetails["carrots"]["description"] = "not just for rabbits";
+  productDetails["carrots"]["description"] = "Fresh and delicious they are ideal for a variety of soups and stews.";
   productDetails["carrots"]["units"] = "1kg";
   productDetails["carrots"]["price"] = 0.99;
 
   productDetails["bananas"] = {};
-  productDetails["bananas"]["image"] = "bananas.gif";
+  productDetails["bananas"]["image"] = "banana.jpg";
   productDetails["bananas"]["name"] = "Bananas";
-  productDetails["bananas"]["description"] = "Yellow and banana-shaped";
-  productDetails["bananas"]["units"] = "500g";
+  productDetails["bananas"]["description"] = "Our organic bananas are great as an energy boosting snack.";
+  productDetails["bananas"]["units"] = "0.5kg";
   productDetails["bananas"]["price"] = 1.29;
 
   productDetails["coconut"] = {};
-  productDetails["coconut"]["image"] = "coconut.gif";
+  productDetails["coconut"]["image"] = "coconut.jpg";
   productDetails["coconut"]["name"] = "Coconut";
-  productDetails["coconut"]["description"] = "That exotic stuff";
+  productDetails["coconut"]["description"] = "Our Fresh coconuts which taste unbelievable!";
   productDetails["coconut"]["units"] = "1";
   productDetails["coconut"]["price"] = 2.99;
 
   productDetails["apples"] = {};
-  productDetails["apples"]["image"] = "apples.gif";
+  productDetails["apples"]["image"] = "apple.jpg";
   productDetails["apples"]["name"] = "Apples";
-  productDetails["apples"]["description"] = "Red, sweet and juicy";
+  productDetails["apples"]["description"] = "Crisp, sweet and tart organic red apples only at eVeg.";
   productDetails["apples"]["units"] = "1kg";
   productDetails["apples"]["price"] = 1.49;
 
   productDetails["cherries"] = {};
-  productDetails["cherries"]["image"] = "cherries.gif";
+  productDetails["cherries"]["image"] = "cherries.jpg";
   productDetails["cherries"]["name"] = "Cherries";
-  productDetails["cherries"]["description"] = "Cherry pancake anyone?";
-  productDetails["cherries"]["units"] = "500g";
+  productDetails["cherries"]["description"] = "Red glace cherries, slightly darker and have an incredibly flavour.";
+  productDetails["cherries"]["units"] = "0.5kg";
   productDetails["cherries"]["price"] = 1.99;
 
   productDetails["tomatoes"] = {};
-  productDetails["tomatoes"]["image"] = "tomatoes.gif";
+  productDetails["tomatoes"]["image"] = "tomato.jpg";
   productDetails["tomatoes"]["name"] = "Tomatoes";
-  productDetails["tomatoes"]["description"] = "Red and ripe";
-  productDetails["tomatoes"]["units"] = "500g";
+  productDetails["tomatoes"]["description"] = "Fine, fruity flavour and firm, juicy flesh, ideal for all uses.";
+  productDetails["tomatoes"]["units"] = "0.5kg";
   productDetails["tomatoes"]["price"] = 1.99;
 
   productDetails["potatoes"] = {};
-  productDetails["potatoes"]["image"] = "potatoes.gif";
+  productDetails["potatoes"]["image"] = "potatoes.jpg";
   productDetails["potatoes"]["name"] = "Potatoes";
-  productDetails["potatoes"]["description"] = "Boil them, bake them, mash them...";
+  productDetails["potatoes"]["description"] = "Potatoes with an attractive yellow flesh, smooth skin and shallow eyes.";
   productDetails["potatoes"]["units"] = "1kg";
   productDetails["potatoes"]["price"] = 0.99;
 
   productDetails["beans"] = {};
-  productDetails["beans"]["image"] = "beans.gif";
+  productDetails["beans"]["image"] = "beans.jpg";
   productDetails["beans"]["name"] = "Beans";
-  productDetails["beans"]["description"] = "Green and healthy";
+  productDetails["beans"]["description"] = "Sweet and tender fine green beans speacially selected for eVeg.";
   productDetails["beans"]["units"] = "1kg";
   productDetails["beans"]["price"] = 1.29;
 

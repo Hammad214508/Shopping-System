@@ -54,7 +54,7 @@ $(document).ready(function(){
     for (var product in basket) {
       if (basket[product] > 0) {
         var qty = basket[product];
-        var name = productDetails[product]["name"] + ' ' + productDetails[product]["units"];
+        var name = productDetails[product]["name"] + '&nbsp' + productDetails[product]["units"];
         var price = productDetails[product]["price"];
         var amount = qty*price
         if(bootstrap_grid_size == "xs" || bootstrap_grid_size == "sm"){

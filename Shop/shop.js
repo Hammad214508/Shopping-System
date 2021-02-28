@@ -80,34 +80,17 @@ $(document).ready(function(){
         '  <div class="mypanel text-center" >'+
         '    <img src="../img/'+ productDetails[product]["image"]+'" class="img-responsive" width="100px" height="90px" style="border:1px solid black;">'+
         '    <h4 class="text-dark">'+productDetails[product]["name"]+'</h4>'+
-        '    <h6>'+ productDetails[product]["description"]+'</h6>'+
+        '    <p style="font-size:12px">'+ productDetails[product]["description"]+'</p>'+
         '    <h6>'+ productDetails[product]["units"]+'</h6>'+
         '    <h6> Price: <strong>&pound;' + productDetails[product]["price"]+'</strong></h6>'+
         '    <h6>Quantity: <input id="'+productDetails[product]["name"].toLowerCase()+'_quantity" type="number" min="1" value="1" style="width: 40px;"> </h6>'+
-        '    <span id="added_'+productDetails[product]["name"].toLowerCase()+'" style="color:green; font-size:12px; display:none;"> <i class="fa fa-check mt-3 mb-1" aria-hidden="true"></i> Added to Basket</span><br>'+
+        '    <span id="added_'+productDetails[product]["name"].toLowerCase()+'" style="color:green; font-size:10px; display:none;"> <i class="fa fa-check mt-1 mb-1" aria-hidden="true"></i> Added to Basket</span><br>'+
         '    <button ref="'+productDetails[product]["name"]+'" type="button" class="btn btn-success add_to_basket">Add to Basket</button>'+
         '  </div>'+
         '</div>'
       )
     }
-
-    $.fn.search_function = function() {
-        var input, filter;
-        input = document.getElementById("search");
-        filter = input.value.toUpperCase();
-
-        for (var i = 0; i < food_items.length; i++) {
-            txtValue = food_items[i];
-            if (txtValue.toUpperCase().indexOf(filter) > -1) {
-              // console.log("display");
-              console.log(txtValue)
-            } else {
-              // console.log("hide");
-            }
-        }
-        console.log("");
-    }
-
+    
     var pageready = (function(){
         var thispage = {};
         thispage.init = function(){
