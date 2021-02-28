@@ -141,6 +141,14 @@ $(document).ready(function(){
 
             }
 
+            $("#more").on("click", function(){
+              $("#filters").slideToggle("slow");
+            })
+
+            $('#price_slider').on('input', function(){
+              $('#price_val').html("£"+$('#price_slider').val());
+            });
+
         };
 
         return thispage;

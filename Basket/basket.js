@@ -95,7 +95,7 @@ $(document).ready(function(){
       '  <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-xs-12">'+
       '    <img src="../img/' + productDetails[product]["image"] + '" class="img-fluid" alt="Image of '+name+'" width="100px" height="90px" style="border:1px solid black;"/>'+
       '  </div>'+
-      '  <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 col-xs-12">'+
+      '  <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-xs-12">'+
       '    <h4>' + name + '</h4>'+
       '    <span class="text-info">'+ productDetails[product]["description"]+'</span><br>'+
       '    <span>' + productDetails[product]["units"] + '</span> for'+
@@ -105,7 +105,7 @@ $(document).ready(function(){
       '    <span class="ml-3" style="border-left:1px solid black;"></span>'+
       '    <button ref="'+name.toLowerCase()+'" type="button" class="btn btn-link dl_item">Delete</button>'+
       '  </div>'+
-      '  <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 col-xs-12">'+
+      '  <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-xs-12">'+
       '    <div class="text-right">'+
       '      <strong id="total_price_'+name.toLowerCase()+'">&pound;'+ $.fn.roundToTwo(basket[product]*productDetails[product]["price"])+'</strong>'+
       '    </div>'+
