@@ -45,17 +45,17 @@
   <div class="container-fluid mb-5">
     <div id="filters" class="row mb-3" style="display:none;">
       <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
-        <input type="search" id="search" class="form-control" placeholder="Search..." style="width: auto;display:inline;"/>
-        <button id="search_btn" type="button" class="btn btn-secondary" style="position:absolute; font-size:22px; display:inline;">
+        <input type="search" id="search1" class="form-control" placeholder="Search..." style="width: auto;display:inline;"/>
+        <button id="search_btn1" type="button" class="btn btn-secondary" style="position:absolute; font-size:22px; display:inline;">
           <i class="fa fa-search"></i>
         </button>
       </div>
       <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12">
         Category:
-        <select class="custom-select" id="title" style="max-width: 130px;">
-          <option selected>All</option>
-          <option value="Mr">Fruits</option>
-          <option value="Mrs">Vegetables</option>
+        <select id="category" class="custom-select" id="title" style="max-width: 130px;">
+          <option value="all" selected>All</option>
+          <option value="fruit">Fruits</option>
+          <option value="vegetable">Vegetables</option>
         </select>
       </div>
       <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 mb-auto">
@@ -64,10 +64,10 @@
             Price
           </div>
           <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 text-left">
-            <input id="price_slider" class="mt-1" type="range" min="0" max="20" step="0.5" />
+            <input id="price_slider" class="mt-1" type="range" min="0" max="5" step="0.25"/>
           </div>
           <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-xs-12 text-left">
-            <span id="price_val" class="font-weight-bold text-secondary"></span>
+            <span id="price_val" class="font-weight-bold text-secondary">£5</span>
           </div>
 
         </div>

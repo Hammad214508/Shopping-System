@@ -2,6 +2,8 @@ $(document).ready(function(){
     var search = $("#search").val();
     var food_items = ["carrots", "bananas", "coconut", "apples",
                     "cherries", "tomatoes", "potatoes", "beans"];
+    var category = "all";
+    var price = 5;
 
     $.fn.getUrlVars = function(){
       var vars = [], hash;
@@ -33,13 +35,26 @@ $(document).ready(function(){
       var i = 0;
       filter = $("#search").val();
       for (var product in productDetails) {
-        if (product.toLowerCase().indexOf(filter) > -1){
-          if (i%4 == 0){
-            var row = $('<div class="row">');
-            parent.append(row)
+        if (category != "all"){
+          if (productDetails[product]["category"] == category && productDetails[product]["price"] < price){
+            if (product.toLowerCase().indexOf(filter) > -1){
+              if (i%4 == 0){
+                var row = $('<div class="row">');
+                parent.append(row)
+              }
+              row.append($.fn.get_product(productDetails, product));
+              i += 1
+            }
           }
-          row.append($.fn.get_product(productDetails, product));
-          i += 1
+        }else{
+          if (product.toLowerCase().indexOf(filter) > -1 && productDetails[product]["price"] < price){
+            if (i%4 == 0){
+              var row = $('<div class="row">');
+              parent.append(row)
+            }
+            row.append($.fn.get_product(productDetails, product));
+            i += 1
+          }
         }
       }
 
@@ -141,13 +156,38 @@ $(document).ready(function(){
 
             }
 
+            $("#category").on("change", function(){
+              category = $(this).val();
+              $.fn.render_products()
+            })
+
             $("#more").on("click", function(){
               $("#filters").slideToggle("slow");
             })
 
+            $('#price_slider').val(5)
+
             $('#price_slider').on('input', function(){
               $('#price_val').html("£"+$('#price_slider').val());
             });
+
+            $('#price_slider').on('change', function(){
+              price = $(this).val()
+              $.fn.render_products()
+            });
+
+
+            $("#search_btn1").on("click", function(){
+              $("#search").val($("#search1").val())
+              $.fn.render_products()
+            })
+
+            $("#search1").on("keyup", function(e){
+              if (e.key === 'Enter' || e.keyCode === 13) {
+                $("#search").val($("#search1").val())
+                $.fn.render_products()
+              }
+            })
 
         };
 

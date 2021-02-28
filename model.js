@@ -120,6 +120,7 @@ function getProductDetails() {
   productDetails["carrots"]["description"] = "Fresh and delicious they are ideal for a variety of soups and stews.";
   productDetails["carrots"]["units"] = "1kg";
   productDetails["carrots"]["price"] = 0.99;
+  productDetails["carrots"]["category"] = "vegetable";
 
   productDetails["bananas"] = {};
   productDetails["bananas"]["image"] = "banana.jpg";
@@ -127,6 +128,7 @@ function getProductDetails() {
   productDetails["bananas"]["description"] = "Our organic bananas are great as an energy boosting snack.";
   productDetails["bananas"]["units"] = "0.5kg";
   productDetails["bananas"]["price"] = 1.29;
+  productDetails["bananas"]["category"] = "fruit";
 
   productDetails["coconut"] = {};
   productDetails["coconut"]["image"] = "coconut.jpg";
@@ -134,6 +136,7 @@ function getProductDetails() {
   productDetails["coconut"]["description"] = "Our Fresh coconuts which taste unbelievable!";
   productDetails["coconut"]["units"] = "1";
   productDetails["coconut"]["price"] = 2.99;
+  productDetails["coconut"]["category"] = "fruit";
 
   productDetails["apples"] = {};
   productDetails["apples"]["image"] = "apple.jpg";
@@ -141,6 +144,7 @@ function getProductDetails() {
   productDetails["apples"]["description"] = "Crisp, sweet and tart organic red apples only at eVeg.";
   productDetails["apples"]["units"] = "1kg";
   productDetails["apples"]["price"] = 1.49;
+  productDetails["apples"]["category"] = "vegetable";
 
   productDetails["cherries"] = {};
   productDetails["cherries"]["image"] = "cherries.jpg";
@@ -148,6 +152,7 @@ function getProductDetails() {
   productDetails["cherries"]["description"] = "Red glace cherries, slightly darker and have an incredibly flavour.";
   productDetails["cherries"]["units"] = "0.5kg";
   productDetails["cherries"]["price"] = 1.99;
+  productDetails["cherries"]["category"] = "fruit";
 
   productDetails["tomatoes"] = {};
   productDetails["tomatoes"]["image"] = "tomato.jpg";
@@ -155,6 +160,7 @@ function getProductDetails() {
   productDetails["tomatoes"]["description"] = "Fine, fruity flavour and firm, juicy flesh, ideal for all uses.";
   productDetails["tomatoes"]["units"] = "0.5kg";
   productDetails["tomatoes"]["price"] = 1.99;
+  productDetails["tomatoes"]["category"] = "fruit";
 
   productDetails["potatoes"] = {};
   productDetails["potatoes"]["image"] = "potatoes.jpg";
@@ -162,6 +168,7 @@ function getProductDetails() {
   productDetails["potatoes"]["description"] = "Potatoes with an attractive yellow flesh, smooth skin and shallow eyes.";
   productDetails["potatoes"]["units"] = "1kg";
   productDetails["potatoes"]["price"] = 0.99;
+  productDetails["potatoes"]["category"] = "vegetable";
 
   productDetails["beans"] = {};
   productDetails["beans"]["image"] = "beans.jpg";
@@ -169,6 +176,7 @@ function getProductDetails() {
   productDetails["beans"]["description"] = "Sweet and tender fine green beans speacially selected for eVeg.";
   productDetails["beans"]["units"] = "1kg";
   productDetails["beans"]["price"] = 1.29;
+  productDetails["beans"]["category"] = "vegetable";
 
   return productDetails;
 }
