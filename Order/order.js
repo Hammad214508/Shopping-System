@@ -24,15 +24,58 @@ $(document).ready(function(){
       return true;
     }
 
+    $.fn.name_cookie = function(){
+      $(".name_cookie").on("change", function(){
+        if ($("#firstname").val() && $("#surname").val()){
+          clientName = getName();
+          console.log(clientName)
+            setName();
+            clientName = getName();
+            console.log(clientName)
+        }
+      })
+    }
+
+    $.fn.address_cookie = function(){
+      $(".address_cookie").on("change", function(){
+        if ($("#number").val() && $("#street").val() && $("#postcode").val() && $("#city").val() && $("#country").val()){
+            setAddress();
+        }
+      })
+    }
+
+    $.fn.card_details_cookie = function(){
+      $(".card_details_cookie").on("change", function(){
+        if ($("#cardnumber").val() && $("#month").val() && $("#year").val() && $("#cvv").val() && $("#card_name").val()){
+            card_details_cookie();
+        }
+      })
+    }
+
+    $.fn.render_from_cookies = function(){
+      $("#firstname").val(getCookieVariableValue("firstname"));
+      $("#surname").val(getCookieVariableValue("surname"));
+      $("#number").val(getCookieVariableValue("number"));
+      $("#street").val(getCookieVariableValue("street"));
+      $("#postcode").val(getCookieVariableValue("postcode"));
+      $("#city").val(getCookieVariableValue("city"));
+      $("#country").val(getCookieVariableValue("country"));
+    };
+
 
 
     var pageready = (function(){
         var thispage = {};
         thispage.init = function(){
+          $.fn.render_from_cookies();
 
           $("#cancel").on("click", function(){
             window.open("/eveg-js/Basket/","_self")
           })
+
+          $.fn.name_cookie();
+          $.fn.address_cookie();
+          $.fn.card_details_cookie();
 
           $("#pay_now").on("click", function(){
             if ($.fn.valid_form()){
@@ -75,12 +118,11 @@ $(document).ready(function(){
             if ($(this).val() == ""){
               $("#card_3").focus();
             }
-
           })
 
           $(".credit_card_num").on("input", function(){
             var card_num = $("#card_1").val()+ $("#card_2").val()+ $("#card_3").val()+ $("#card_4").val();
-            $("#cardnumber").val(card_num);
+            $("#cardnumber").val(card_num).trigger("change");
           })
 
           $("#cc").on("input", function(){
@@ -98,7 +140,6 @@ $(document).ready(function(){
             this.setSelectionRange(c, c);
           })
 
-
           $("#month").on("input", function(){
             if ($(this).val().length >= 2){
               $("#year").focus();
@@ -112,7 +153,6 @@ $(document).ready(function(){
           })
 
           $("#cc").mask("9999-9999-9999-9999");
-
 
         };
         return thispage;

@@ -80,7 +80,7 @@ $(document).ready(function(){
         '  <div class="mypanel text-center" >'+
         '    <img src="../img/'+ productDetails[product]["image"]+'" class="img-responsive" width="100px" height="90px" style="border:1px solid black;">'+
         '    <h4 class="text-dark">'+productDetails[product]["name"]+'</h4>'+
-        '    <p style="font-size:12px">'+ productDetails[product]["description"]+'</p>'+
+        '    <p style="font-size:12px; margin-bottom:0.5rem;">'+ productDetails[product]["description"]+'</p>'+
         '    <h6>'+ productDetails[product]["units"]+'</h6>'+
         '    <h6> Price: <strong>&pound;' + productDetails[product]["price"]+'</strong></h6>'+
         '    <h6>Quantity: <input id="'+productDetails[product]["name"].toLowerCase()+'_quantity" type="number" min="1" value="1" style="width: 40px;"> </h6>'+
@@ -90,7 +90,7 @@ $(document).ready(function(){
         '</div>'
       )
     }
-    
+
     var pageready = (function(){
         var thispage = {};
         thispage.init = function(){

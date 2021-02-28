@@ -2,8 +2,7 @@
     <title>Order</title>
     <?php include ($_SERVER['DOCUMENT_ROOT'].'/eveg-js/header.php') ?>
 </head>
-
-<body onload="createEmptyOrder();">
+<body>
   <?php include ($_SERVER['DOCUMENT_ROOT'].'/eveg-js/navigation.php');?>
 
   <div class="container-fluid">
@@ -36,12 +35,12 @@
       </div>
       <div class="row mt-2">
         <p>
-          <input id="firstname" name="firstname" type="text" class="form-control order_input_size" required minlength="2" placeholder="First Name" autofocus>
+          <input id="firstname" name="firstname" type="text" class="form-control order_input_size name_cookie" required minlength="2" placeholder="First Name" autofocus>
         </p>
       </div>
       <div class="row">
         <p>
-          <input id="surname" name="surname" type="text" class="form-control order_input_size" required minlength="2" placeholder="Surname">
+          <input id="surname" name="surname" type="text" class="form-control order_input_size name_cookie" required minlength="2" placeholder="Surname">
         </p>
       </div>
     </div>
@@ -52,27 +51,27 @@
       </div>
       <div class="row mt-2">
         <p>
-          <input id="number" name="number" type="text" class="form-control order_input_size" required placeholder="House number">
+          <input id="number" name="number" type="text" class="form-control order_input_size address_cookie" required placeholder="House number">
         </p>
       </div>
       <div class="row">
         <p>
-          <input id="street" name="street" type="text" class="form-control order_input_size" required minlength="2"  placeholder="Street address">
+          <input id="street" name="street" type="text" class="form-control order_input_size address_cookie" required minlength="2"  placeholder="Street address">
         </p>
       </div>
       <div class="row">
         <p>
-          <input id="postcode" name="postcode" type="text" class="form-control order_input_size" required minlength="2" placeholder="Postcode">
+          <input id="postcode" name="postcode" type="text" class="form-control order_input_size address_cookie" required minlength="2" placeholder="Postcode">
         </p>
       </div>
       <div class="row">
         <p>
-          <input id="city" name="city" type="text" class="form-control order_input_size" required minlength="2"  placeholder="City">
+          <input id="city" name="city" type="text" class="form-control order_input_size address_cookie" required minlength="2"  placeholder="City">
         </p>
       </div>
       <div class="row autocomplete">
         <p>
-          <input id="country" name="country" type="search" class="form-control order_input_size" required minlength="2" placeholder="Country">
+          <input id="country" name="country" type="search" class="form-control order_input_size address_cookie" required minlength="2" placeholder="Country">
         </p>
       </div>
     </div>
@@ -102,16 +101,16 @@
                   <div class=" d-none d-lg-block d-md-block">
                     <div class="row">
                         <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2">
-                            <input id="card_1" name="card_1" type="text" ref="1" class="form-control credit_card_num only_numbers" required placeholder="0000" maxlength="4" minlength="4"/>
+                            <input id="card_1" name="card_1" type="text" ref="1" class="form-control credit_card_num only_numbers card_details_cookie" required placeholder="0000" maxlength="4" minlength="4"/>
                         </div>
                         <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2">
-                            <input id="card_2" name="card_2" type="text" ref="2" class="form-control credit_card_num only_numbers" required placeholder="0000" maxlength="4" minlength="4"/>
+                            <input id="card_2" name="card_2" type="text" ref="2" class="form-control credit_card_num only_numbers card_details_cookie" required placeholder="0000" maxlength="4" minlength="4"/>
                         </div>
                         <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2">
-                            <input id="card_3" name="card_3" type="text" ref="3" class="form-control credit_card_num only_numbers" required placeholder="0000" maxlength="4" minlength="4"/>
+                            <input id="card_3" name="card_3" type="text" ref="3" class="form-control credit_card_num only_numbers card_details_cookie" required placeholder="0000" maxlength="4" minlength="4"/>
                         </div>
                         <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2">
-                            <input id="card_4" name="card_4" type="text" ref="4" class="form-control credit_card_num only_numbers" required placeholder="0000" maxlength="4" minlength="4"/>
+                            <input id="card_4" name="card_4" type="text" ref="4" class="form-control credit_card_num only_numbers card_details_cookie" required placeholder="0000" maxlength="4" minlength="4"/>
                         </div>
                       </div>
                   </div>
@@ -119,7 +118,7 @@
                   <div class="d-md-none">
                     <div class="row ">
                       <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2">
-                          <input id="cc" class="form-control" type="text" data-inputmask="'mask': '9999-9999-9999-9999'" />
+                          <input id="cc" class="form-control card_details_cookie" type="text" data-inputmask="'mask': '9999-9999-9999-9999'" />
                         </div>
                     </div>
                   </div>
@@ -128,20 +127,20 @@
 
 
 
-                <input id="cardnumber" type="text" style="display:none;">
+                <input id="cardnumber" type="text" class="card_details_cookie" style="display:none;">
 
                 <div class="row  mt-3">
                     <div class="col-xl-2 col-lg-2 col-md-2 col-sm-3 col-xs-3">
                         <span class="help-block text-muted small-font" > Expiry Month</span>
-                        <input id="month" name="month" type="text" class="form-control only_numbers" placeholder="MM" required maxlength="2"/>
+                        <input id="month" name="month" type="text" class="form-control only_numbers card_details_cookie" placeholder="MM" required maxlength="2"/>
                     </div>
                     <div class="col-xl-2 col-lg-2 col-md-2 col-sm-3 col-xs-3">
                         <span class="help-block text-muted small-font">  Expiry Year</span>
-                        <input id="year" name="year" type="text" class="form-control only_numbers" placeholder="YY" required maxlength="2"/>
+                        <input id="year" name="year" type="text" class="form-control only_numbers card_details_cookie" placeholder="YY" required maxlength="2"/>
                     </div>
                     <div class="col-xl-2 col-lg-2 col-md-2 col-sm-3 col-xs-3">
                         <span class="help-block text-muted small-font">  CVV</span>
-                        <input id="cvv" name="cvv" type="text" class="form-control only_numbers" placeholder="CVV" required maxlength="3"/>
+                        <input id="cvv" name="cvv" type="text" class="form-control only_numbers card_details_cookie" placeholder="CVV" required maxlength="3"/>
                     </div>
                     <div class="col-xl-2 col-lg-2 col-md-3 col-sm-3 col-xs-3 mt-auto d-none d-lg-block d-md-block">
                       <i class="fa fa-credit-card-alt" style="font-size:36px"></i>
@@ -155,7 +154,7 @@
 
                 <div class="row mt-3">
                     <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-xs-8 pad-adjust">
-                        <input name="card_name" type="text" class="form-control" required placeholder="Name On The Card" />
+                        <input id="card_name" name="card_name" type="text" class="form-control card_details_cookie" required placeholder="Name On The Card" />
                     </div>
                 </div>
                 <div class="row mt-4">
