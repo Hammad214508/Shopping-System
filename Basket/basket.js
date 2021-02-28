@@ -140,6 +140,10 @@ $(document).ready(function(){
       $("#"+item+"_row").hide();
       $("#undo_"+item).show();
       $.fn.show_price();
+      var count = parseInt($("#cart_count").html())
+      count -= 1;
+      $("#cart_count").html(count)
+
     })
 
     $(".undo_dl").on("click", function(){
