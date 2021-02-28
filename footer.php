@@ -5,3 +5,4 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
 <script src="<?php global $basedir; ?>/eveg-js/js_helper/search_bar.js"></script>
 <script src="<?php global $basedir; ?>/eveg-js/js_helper/scroll_to_top.js"></script>
+<script src="<?php global $basedir; ?>/eveg-js/js_helper/basket_preview.js"></script>

@@ -159,3 +159,75 @@ label.error{
 .show_border{
   border:1px solid black;
 }
+
+.shopping-cart{
+  background-color: white;
+  position: absolute;
+  width: 320px;
+  top: 50px;
+  right: 40px;
+  border-radius: 3px;
+  padding: 20px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.26)!important;
+  max-height: 325px;
+  overflow-y: scroll;
+  z-index:1;
+}
+
+.shopping-cart-header {
+    border-bottom: 1px solid #E8E8E8;
+    padding-bottom: 15px;
+}
+
+.badge {
+    background-color: red;
+    border-radius: 10px;
+    color: white;
+    display: inline-block;
+    font-size: 12px;
+    line-height: 1;
+    padding: 3px 7px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.shopping-cart-total {
+  float: right;
+}
+
+.cart-icon {
+  color: #515783;
+  font-size: 24px;
+  margin-right: 7px;
+  float: left;
+}
+
+.shopping-cart-items {
+    padding-top: 20px;
+}
+.shopping-cart-items .clearfix {
+  margin-bottom: 18px;
+}
+
+.shopping-cart-items img {
+  float: left;
+  margin-right: 12px;
+  max-width: 70px;
+  max-height: 70px;
+}
+.shopping-cart-items .item-name {
+  display: block;
+  font-size: 16px;
+}
+.shopping-cart-items .item-detail {
+  display: block;
+  font-size: 12px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.shopping-cart-items .item-price {
+  margin-right: 8px;
+}

@@ -40,8 +40,23 @@
               <i class="fa fa-shopping-cart" aria-hidden="true" style="font-size:20px"></i>
               <span class='badge badge-warning' id='cart_count'></span>
             </a>
+
           </li>
         </ul>
+        <div class="shopping-cart" style="display:none;">
+          <div class="shopping-cart-header mb-1">
+            <i class="fa fa-shopping-cart cart-icon"></i><span id="preview_count" class="badge">3</span>
+            <div class="shopping-cart-total">
+              <span class="lighter-text">Total:</span>
+              <span class="main-color-text total"><strong id="preview_price"></strong></span>
+            </div>
+          </div>
+          <div class="shopping-cart-items"></div>
+          <div class="text-center mb-3">
+            <button id="preview_checkout" type="button" class="btn btn-lg btn-block btn-success mt-4">Checkout <i class="fa fa-chevron-right ml-1" aria-hidden="true"></i></button>
+          </div>
+
+        </div>
     </div>
 
   </div>
