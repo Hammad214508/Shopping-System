@@ -42,14 +42,14 @@
 
         <div id="basket_buttons" class="row bskt_not_empty mt-4" style="display:none">
           <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12 mb-2" style="display:block">
-            <button id="continue_shopping" type="button" class="btn btn-warning">Continue Shopping</button>
+            <button id="continue_shopping" type="button" class="btn btn-lg btn-warning">Continue Shopping</button>
           </div>
           <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12 mb-2">
-              <button  type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModalCenter">Clear Basket</button>
+              <button  type="button" class="btn btn-lg btn-danger" data-toggle="modal" data-target="#exampleModalCenter">Clear Basket</button>
           </div>
-          <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12"></div>
-          <div id="checkout_btn" class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12 text-right">
-            <button type="button" class="btn btn-success checkout">Proceed to Checkout</button>
+          <!-- <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12"></div> -->
+          <div id="checkout_btn" class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 text-right">
+            <button type="button" class="btn btn-lg btn-success checkout">Proceed to Checkout <i class="fa fa-chevron-right ml-1" aria-hidden="true"></i></button>
           </div>
 
         </div>
@@ -65,7 +65,7 @@
             </div>
           </h5>
 
-          <button id="order" type="button" class="btn btn-block btn-success mt-4 checkout" >Proceed to Checkout</button>
+          <button id="order" type="button" class="btn btn-lg btn-block btn-success mt-4 checkout" >Checkout <i class="fa fa-chevron-right ml-1" aria-hidden="true"></i></button>
 
         </div>
       </div>

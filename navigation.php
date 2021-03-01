@@ -13,7 +13,6 @@
 
     <div id="main-menu" class="collapse navbar-collapse">
         <ul class="nav navbar-nav mr-auto mt-2 mt-lg-0">
-          <!-- <li class="nav-item"><a id="nav-about" class="nav-link" href="<?php global $basedir; ?>/eveg-js/About/">About</a></li> -->
           <li class="nav-item"><a id="nav-contact" class="nav-link" href="<?php global $basedir; ?>/eveg-js/Contact/">Contact Us</a></li>
           <li class="nav-item"><a id="nav-help" class="nav-link" href="<?php global $basedir; ?>/eveg-js/Help/">Help</a></li>
           <div class="d-none d-lg-block">
@@ -28,7 +27,6 @@
                       <i class="fa fa-search"></i>
                     </button>
               </div>
-
             </div>
           </li>
         </ul>
@@ -55,10 +53,8 @@
           <div class="text-center mb-3">
             <button id="preview_checkout" type="button" class="btn btn-lg btn-block btn-success mt-4">Checkout <i class="fa fa-chevron-right ml-1" aria-hidden="true"></i></button>
           </div>
-
         </div>
     </div>
-
   </div>
 </nav>
 

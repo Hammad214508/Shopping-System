@@ -93,7 +93,7 @@ $(document).ready(function(){
       '<div id="undo_'+name.toLowerCase()+'" style="display:none;">'+name+' removed succesfully. <button ref="'+name.toLowerCase()+'" type="button" class="btn btn-link undo_dl">Undo</button></div>'+
       '<div id="'+name.toLowerCase()+'_row" class="row">'+
       '  <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-xs-12">'+
-      '    <img src="../img/' + productDetails[product]["image"] + '" class="img-fluid" alt="Image of '+name+'" width="100px" height="90px" style="border:1px solid black;"/>'+
+      '    <img src="../img/' + productDetails[product]["image"] + '" class="img-fluid" alt="Image of '+name+'" width="115px" height="100px" />'+
       '  </div>'+
       '  <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-xs-12">'+
       '    <h4>' + name + '</h4>'+

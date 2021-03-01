@@ -76,7 +76,7 @@
       </div>
 
     </div>
-    <h5 id="no_res" style="display;none;">0 results for <span id="search_txt"></span></h5>
+    <h5 id="no_res" style="display;none;">0 results found</h5>
     <div id="products_table"></div>
   </div>
 

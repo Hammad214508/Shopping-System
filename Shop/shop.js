@@ -94,7 +94,7 @@ $(document).ready(function(){
         '<div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-xs-12 mb-2">'+
         '  <div class="mypanel text-center" >'+
         '    <img src="../img/'+ productDetails[product]["image"]+'" class="img-responsive" width="100px" height="90px" style="border:1px solid black;">'+
-        '    <h4 class="text-dark">'+productDetails[product]["name"]+'</h4>'+
+        '    <h4 class="text-dark mt-1">'+productDetails[product]["name"]+'</h4>'+
         '    <p style="font-size:12px; margin-bottom:0.5rem;">'+ productDetails[product]["description"]+'</p>'+
         '    <h6>'+ productDetails[product]["units"]+'</h6>'+
         '    <h6> Price: <strong>&pound;' + productDetails[product]["price"]+'</strong></h6>'+
