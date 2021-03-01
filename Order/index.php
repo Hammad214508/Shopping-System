@@ -35,12 +35,12 @@
       </div>
       <div class="row mt-2">
         <p>
-          <input id="firstname" name="firstname" type="text" class="form-control order_input_size name_cookie" required minlength="2" placeholder="First Name" autofocus>
+          <input id="firstname" name="firstname" type="text" class="form-control order_input_size name_cookie capitalise" required minlength="2" placeholder="First Name" autofocus>
         </p>
       </div>
       <div class="row">
         <p>
-          <input id="surname" name="surname" type="text" class="form-control order_input_size name_cookie" required minlength="2" placeholder="Surname">
+          <input id="surname" name="surname" type="text" class="form-control order_input_size name_cookie capitalise" required minlength="2" placeholder="Surname">
         </p>
       </div>
     </div>
@@ -51,12 +51,12 @@
       </div>
       <div class="row mt-2">
         <p>
-          <input id="number" name="number" type="text" class="form-control order_input_size address_cookie" required placeholder="House number">
+          <input id="number" name="number" type="text" class="form-control order_input_size address_cookie capitalise" required placeholder="House number">
         </p>
       </div>
       <div class="row">
         <p>
-          <input id="street" name="street" type="text" class="form-control order_input_size address_cookie" required minlength="2"  placeholder="Street address">
+          <input id="street" name="street" type="text" class="form-control order_input_size address_cookie capitalise" required minlength="2"  placeholder="Street address">
         </p>
       </div>
       <div class="row">
@@ -66,7 +66,7 @@
       </div>
       <div class="row">
         <p>
-          <input id="city" name="city" type="text" class="form-control order_input_size address_cookie" required minlength="2"  placeholder="City">
+          <input id="city" name="city" type="text" class="form-control order_input_size address_cookie capitalise" required minlength="2"  placeholder="City">
         </p>
       </div>
       <div class="row autocomplete">

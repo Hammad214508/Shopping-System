@@ -141,9 +141,6 @@ $(document).ready(function(){
                 search = $(this).val();
                 $.fn.render_products();
               }
-              // search = $(this).val();
-              // $.fn.render_products();
-
             });
 
 

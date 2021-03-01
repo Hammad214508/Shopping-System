@@ -133,7 +133,7 @@ function getProductDetails() {
   productDetails["coconut"] = {};
   productDetails["coconut"]["image"] = "coconut.jpg";
   productDetails["coconut"]["name"] = "Coconut";
-  productDetails["coconut"]["description"] = "Our Fresh coconuts which taste unbelievable!";
+  productDetails["coconut"]["description"] = "Our Fresh coconuts which have countless uses and taste unbelievable!";
   productDetails["coconut"]["units"] = "1";
   productDetails["coconut"]["price"] = 2.99;
   productDetails["coconut"]["category"] = "fruit";
@@ -285,6 +285,23 @@ function createEmptyBasket() {
   for (var i = 0; i < productcount; i++) {
     document.cookie=products[i] + "=0;path=/";
   }
+}
+
+function emptyName(){
+  document.cookie="title=;path=/";
+  document.cookie="firstname=;path=/";
+  document.cookie="surname=;path=/";
+}
+
+function emptyAddress(){
+  document.cookie="title=;path=/";
+  document.cookie="firstname=;path=/";
+  document.cookie="surname=;path=/";
+  document.cookie="number=;path=/";
+  document.cookie="street=;path=/";
+  document.cookie="postcode=;path=/";
+  document.cookie="city=;path=/";
+  document.cookie="country=;path=/";
 }
 
 function createEmptyOrder() {

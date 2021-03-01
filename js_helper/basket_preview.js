@@ -48,10 +48,10 @@ $.fn.get_basket_preview_item = function(product){
     '   <img src="../img/' + productDetails[product]["image"] + '" alt="Image of '+product+'" />'+
     ' </div>'+
     ' <div class="col-xl-9 col-lg-9 col-md-9 col-sm-12 col-xs-12">'+
-    '   <span class="item-name">'+productDetails[product]["name"]+'</span>'+
+    '   <span class="item-name"><strong>'+productDetails[product]["name"]+'</strong></span>'+
     '   <span class="item-detail">'+productDetails[product]["description"]+'</span>'+
-    '   <span class="item-price">&pound;' + productDetails[product]["price"] + '</span>'+
-    '   <span class="item-quantity">Quantity: '+basket[product]+'</span>'+
+    '   <span class="item-price"><strong>&pound;' + productDetails[product]["price"] + '</strong></span>'+
+    '   <span class="item-quantity">Qty: '+basket[product]+'</span>'+
     ' </div>'+
     '<div>'+
     '</div>'

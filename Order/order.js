@@ -28,10 +28,14 @@ $(document).ready(function(){
       $(".name_cookie").on("change", function(){
         if ($("#firstname").val() && $("#surname").val()){
           clientName = getName();
-          console.log(clientName)
             setName();
             clientName = getName();
-            console.log(clientName)
+        }
+      })
+
+      $(".name_cookie").on("input", function(){
+        if ($(this).val() == ""){
+          emptyName();
         }
       })
     }
@@ -40,6 +44,12 @@ $(document).ready(function(){
       $(".address_cookie").on("change", function(){
         if ($("#number").val() && $("#street").val() && $("#postcode").val() && $("#city").val() && $("#country").val()){
             setAddress();
+        }
+      })
+
+      $(".address_cookie").on("input", function(){
+        if ($(this).val() == ""){
+          emptyAddress();
         }
       })
     }
@@ -62,6 +72,33 @@ $(document).ready(function(){
       $("#country").val(getCookieVariableValue("country"));
     };
 
+    $.fn.input_with_capitalise = function(){
+      $('.capitalise').on('keydown', function(event) {
+        if (this.selectionStart == 0 && event.keyCode >= 65 && event.keyCode <= 90 && !(event.shiftKey) && !(event.ctrlKey) && !(event.metaKey) && !(event.altKey)) {
+           var $t = $(this);
+           event.preventDefault();
+           var char = String.fromCharCode(event.keyCode);
+           $t.val(char + $t.val().slice(this.selectionEnd));
+           this.setSelectionRange(1,1);
+        }
+      });
+
+      $('#postcode').one("keyup", function(){
+          $(this).attr("style", "text-transform: uppercase;")
+      });
+
+      $('#postcode').on("input", function(){
+        if ($(this).val() == ""){
+          $(this).attr("style", "")
+          $('#postcode').one("keypress", function(){
+              $(this).attr("style", "text-transform: uppercase;")
+          });
+        }
+      })
+    }
+
+
+
 
 
     var pageready = (function(){
@@ -76,6 +113,7 @@ $(document).ready(function(){
           $.fn.name_cookie();
           $.fn.address_cookie();
           $.fn.card_details_cookie();
+          $.fn.input_with_capitalise()
 
           $("#pay_now").on("click", function(){
             if ($.fn.valid_form()){
