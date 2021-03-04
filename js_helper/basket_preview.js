@@ -3,7 +3,7 @@ var timeout;
 $("#nav-basket").hover(function(e) {
   if (parseInt($("#cart_count").html()) > 0){
     timeout = setTimeout(function(){
-      $(".shopping-cart-items").empty()
+      $("#cart_items_preview").empty()
       $.fn.render_all_items();
       $(".shopping-cart").slideDown();
     }, 400);
@@ -35,14 +35,14 @@ $.fn.render_all_items = function(){
 
   for (var product in productDetails) {
     if (basket[product] > 0) {
-      $(".shopping-cart-items").append($.fn.get_basket_preview_item(product));
+      $("#cart_items_preview").append($.fn.get_basket_preview_item(product));
     }
   }
 }
 
 $.fn.get_basket_preview_item = function(product){
   return(
-    '<div class="clearfix">'+
+    '<div class="clearfix mt-2">'+
     '<div class="row">'+
     ' <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12">'+
     '   <img src="../img/' + productDetails[product]["image"] + '" alt="Image of '+product+'" />'+

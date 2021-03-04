@@ -49,7 +49,7 @@
               <span class="main-color-text total"><strong id="preview_price"></strong></span>
             </div>
           </div>
-          <div class="shopping-cart-items"></div>
+          <div id="cart_items_preview" class="shopping-cart-items"></div>
           <div class="text-center mb-3">
             <button id="preview_checkout" type="button" class="btn btn-lg btn-block btn-success mt-4">Checkout <i class="fa fa-chevron-right ml-1" aria-hidden="true"></i></button>
           </div>

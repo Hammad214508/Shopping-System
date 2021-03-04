@@ -57,7 +57,7 @@ $(document).ready(function(){
     $.fn.card_details_cookie = function(){
       $(".card_details_cookie").on("change", function(){
         if ($("#cardnumber").val() && $("#month").val() && $("#year").val() && $("#cvv").val() && $("#card_name").val()){
-            card_details_cookie();
+            $.fn.card_details_cookie();
         }
       })
     }
@@ -98,6 +98,44 @@ $(document).ready(function(){
     }
 
 
+    $.fn.roundToTwo = function(num){
+      return parseFloat(Math.round(num + "e+2")  + "e-2").toFixed(2);;
+    }
+
+    $.fn.render_items = function(){
+      $("#items_summary").empty()
+      basket = readBasket();
+      productDetails = getProductDetails();
+      totals = calculateTotals();
+      var num_items = parseInt($("#cart_count").html())
+      var txt = num_items == 1 ? "item" : "items"
+      $("#item_in_summary").html(num_items+" "+txt);
+      $(".summary_price").html("£"+$.fn.roundToTwo(totals["total"]));
+
+      for (var product in productDetails) {
+        if (basket[product] > 0) {
+          $("#items_summary").append($.fn.get_basket_preview_item1(product));
+        }
+      }
+    }
+
+    $.fn.get_basket_preview_item1 = function(product){
+      return(
+        '<div class="row mb-2">'+
+        ' <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-xs-12">'+
+        '   <img src="../img/' + productDetails[product]["image"] + '" alt="Image of '+product+'" />'+
+        ' </div>'+
+        ' <div class="col-xl-9 col-lg-9 col-md-9 col-sm-12 col-xs-12">'+
+        '   <span class="item-name"><strong>'+productDetails[product]["name"]+'</strong></span>'+
+        '   <span class="item-detail">'+productDetails[product]["description"]+'</span>'+
+        '   <span class="item-price"><strong>&pound;' + productDetails[product]["price"] + '</strong></span>'+
+        '   <span class="item-quantity">Qty: '+basket[product]+'</span>'+
+        ' </div>'+
+        '<div>'
+      )
+    }
+
+
 
 
 
@@ -105,6 +143,7 @@ $(document).ready(function(){
         var thispage = {};
         thispage.init = function(){
           $.fn.render_from_cookies();
+          $.fn.render_items();
 
           $("#cancel").on("click", function(){
             window.open("/eveg-js/Basket/","_self")
@@ -191,6 +230,10 @@ $(document).ready(function(){
           })
 
           $("#cc").mask("9999-9999-9999-9999");
+
+          $("#view_summary").on("click", function(){
+            $("#summary_container").slideToggle("slow");
+          })
 
         };
         return thispage;

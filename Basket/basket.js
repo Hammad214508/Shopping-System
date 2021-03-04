@@ -123,13 +123,17 @@ $(document).ready(function(){
 
   $.fn.basket_item_events = function(){
     $(".quantity").on("change", function(){
+      var timer = clearTimeout(timer);
       var item = $(this).attr("ref");
+      var self = $(this);
+      self.css("border", "1.5px solid #28a745");
       if ($.fn.isNumeric($(this).val())){
         $("#total_price_"+item).html("&pound;" + $.fn.roundToTwo($(this).val()*productDetails[item]["price"]))
         changeProductQuantity(item, $(this).val());
         basket = readBasket();
         $.fn.show_price();
       }
+      timer = setTimeout(function() {self.css("border", "");}, 1000);
     })
 
     $(".dl_item").on("click", function(){
