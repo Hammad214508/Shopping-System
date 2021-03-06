@@ -2,7 +2,7 @@
   <title>Home</title>
   <?php include ($_SERVER['DOCUMENT_ROOT'].'/eveg-js/header.php') ?>
 </head>
-<body onload="setupBasket();" style="background-image: url('../tree.png') ; background-repeat: no-repeat; background-position: 0% 75%;; background-size: 27em 27em;">
+<body onload="setupBasket();" style="background-image: url('https://www.graphicsprings.com/filestorage/stencils/e032837757642e30c23a8df41b5b1b0e.svg') ; background-repeat: no-repeat; background-position: 0% 75%;; background-size: 27em 27em;">
   <?php include ($_SERVER['DOCUMENT_ROOT'].'/eveg-js/navigation.php');?>
   <div class="container-fluid mb-5">
     <div class="text-center black_font" style="margin-top:14em;">
