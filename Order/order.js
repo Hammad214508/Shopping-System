@@ -21,6 +21,7 @@ $(document).ready(function(){
         $("#expired").show();
         return false;
       }
+      $("#expired").hide();
       return true;
     }
 

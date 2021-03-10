@@ -113,7 +113,7 @@
     </div>
     <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-xs-12">
       <h3 class="">Payment Information</h3>
-      <hr style="width: 500px; margin-left:0;">
+      <hr style="width: 600px; margin-left:0;">
       <div class="container-fluid">
       <div class="row mb-5">
         <div class="col-xl-8 col-lg-8 col-md-11 col-sm-11 col-xs-11 ">

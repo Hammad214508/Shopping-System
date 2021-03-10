@@ -47,7 +47,6 @@
           <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12 mb-2">
               <button  type="button" class="btn btn-lg btn-danger" data-toggle="modal" data-target="#exampleModalCenter">Clear Basket</button>
           </div>
-          <!-- <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12"></div> -->
           <div id="checkout_btn" class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 text-right">
             <button type="button" class="btn btn-lg btn-success checkout">Proceed to Checkout <i class="fa fa-chevron-right ml-1" aria-hidden="true"></i></button>
           </div>

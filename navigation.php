@@ -3,7 +3,7 @@
 
     <div class="navbar-header">
       <a class="navbar-brand" href="<?php global $basedir; ?>/eveg-js/Home">
-        <img style="max-width:100px; margin-top: -7px;" src="<?php global $basedir; ?>/eveg-js/logo.png">
+        <img style="max-width:100px; margin-top: -7px;" src="<?php global $basedir; ?>/eveg-js/img/logo.png">
       </a>
     </div>
 
