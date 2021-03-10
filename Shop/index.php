@@ -43,7 +43,7 @@
   </div>
 
   <div class="container-fluid mb-5">
-    <div id="filters" class="row mb-3" style="display:none;">
+    <div id="filters" class="row mb-4" style="display:none;">
       <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12 mt-2">
         <input type="search" id="search1" class="form-control" placeholder="Search..." style="width: auto;display:inline;"/>
         <button id="search_btn1" type="button" class="btn btn-secondary" style="position:absolute; font-size:22px; display:inline;">

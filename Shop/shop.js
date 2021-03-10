@@ -33,7 +33,7 @@ $(document).ready(function(){
       parent.empty();
       var productDetails = getProductDetails();
       var i = 0;
-      filter = $("#search").val();
+      filter = search;
       for (var product in productDetails) {
         if (category != "all"){
           if (productDetails[product]["category"] == category && productDetails[product]["price"] < price){
@@ -143,12 +143,24 @@ $(document).ready(function(){
               }
             });
 
+            $("#search1").keyup(function(e){
+              // if (($(this).val()) == ""){
+              //   search = $(this).val();
+              //   $.fn.render_products();
+              // }
+              // if (e.which == 13){
+                console.log("HERE")
+                search = $(this).val();
+                $.fn.render_products();
+              // }
+            });
+
 
             if (location.search){
               search_text = $.fn.getUrlVars();
               txt = search_text["search"];
               $("#search").val(txt);
-              search =   $("#search").val();
+              search = $("#search").val();
               $.fn.render_products();
 
             }

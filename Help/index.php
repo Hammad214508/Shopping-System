@@ -15,7 +15,7 @@
 
   <div class="container-fluid mb-5">
     <h2>FAQs (Frequently Asked Questions)</h2>
-    <hr>
+    <hr width="50%" style="margin-left: 0px;">
     <h5 class="mt-2">Overview</h5>
     <button type="button" class="btn btn-link text-left">What is eVeg?</button><br>
     <button type="button" class="btn btn-link text-left">How can I contact eVeg?</button><br>
@@ -25,13 +25,11 @@
     <button type="button" class="btn btn-link text-left">I was charged more than expected.</button><br>
     <button type="button" class="btn btn-link text-left">I have a discount or credit coupon code. Where do I enter it?</button><br>
     <button type="button" class="btn btn-link text-left">Which forms of payments do you accept?</button><br>
-
-
     <h5 class="mt-2">Privacy</h5>
     <button type="button" class="btn btn-link text-left">Who can see my email address?</button><br>
 
-    <h2 class="mt-5">Help Articles</h2>
-    <hr>
+    <h2 class="mt-4">Help Articles</h2>
+    <hr width="50%" style="margin-left: 0px;">
     <button type="button" class="btn btn-link text-left">Searching for an item.</button><br>
     <button type="button" class="btn btn-link text-left">Adding an item to the basket.</button><br>
     <button type="button" class="btn btn-link text-left">Canceling an order.</button><br>
